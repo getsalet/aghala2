@@ -19,6 +19,16 @@
       "sha256": "09699bc8bc1e2eb36561f4dc123a81a76645a8cb45b03de5a3613d99537d8f49",
       "size": 893845,
       "uploaded_at": "2026-10-11T20:21:17+00:00"
+    },
+    "russian-batch-005-sources-0201-0250.zip": {
+      "sha256": "0e95bb6dc1989edcb0e5cce936b45340967c5de7524d0839ece235694d2a35ae",
+      "size": 904788,
+      "uploaded_at": "2026-10-11T20:25:21+00:00"
+    },
+    "russian-batch-006-sources-0251-0300.zip": {
+      "sha256": "bc16018ed0c5f1dc0956ef2334012ba90ca5025232f362a9db9ab5f4171928ea",
+      "size": 909600,
+      "uploaded_at": "2026-10-11T20:25:24+00:00"
     }
   }
 }
