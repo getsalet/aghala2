@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-11T15:24:17+00:00",
+  "updated_at": "2026-10-11T15:36:17+00:00",
   "language": "ru-RU",
   "route": "/ru/",
   "category_slug": "ru",
   "source_articles_completed": 1016,
-  "completed": 219,
-  "pending": 797,
-  "progress_percent": 21.56,
-  "articles_with_failed_attempts": 13,
+  "completed": 230,
+  "pending": 786,
+  "progress_percent": 22.64,
+  "articles_with_failed_attempts": 18,
   "batch_size": 16,
   "workers": 8,
   "model": "agnes-3.0-flash",
@@ -18,8 +18,8 @@
   "uploaded_packages": 0,
   "last_run": {
     "selected": 16,
-    "succeeded": 9,
-    "failed": 7,
-    "finished_at": "2026-10-11T15:24:17+00:00"
+    "succeeded": 11,
+    "failed": 5,
+    "finished_at": "2026-10-11T15:36:17+00:00"
   }
 }
