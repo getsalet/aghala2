@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-11T20:07:43+00:00",
+  "updated_at": "2026-10-11T20:13:01+00:00",
   "language": "ru-RU",
   "route": "/ru/",
   "category_slug": "ru",
   "source_articles_completed": 1016,
-  "completed": 936,
-  "pending": 80,
-  "progress_percent": 92.13,
+  "completed": 952,
+  "pending": 64,
+  "progress_percent": 93.7,
   "articles_with_failed_attempts": 48,
   "batch_size": 16,
   "workers": 8,
@@ -18,8 +18,8 @@
   "uploaded_packages": 0,
   "last_run": {
     "selected": 16,
-    "succeeded": 15,
-    "failed": 1,
-    "finished_at": "2026-10-11T20:07:42+00:00"
+    "succeeded": 16,
+    "failed": 0,
+    "finished_at": "2026-10-11T20:13:01+00:00"
   }
 }
