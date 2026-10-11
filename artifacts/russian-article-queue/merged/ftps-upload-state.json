@@ -1,0 +1,14 @@
+{
+  "files": {
+    "russian-all-articles.zip": {
+      "sha256": "4c6af0a4b40443500623e16a2fff6cfd3ae2aca30943111f5d8eb4b3614063c4",
+      "size": 6151289,
+      "uploaded_at": "2026-10-11T21:57:48+00:00"
+    },
+    "russian-all-articles-rollback.zip": {
+      "sha256": "08e00934164572648a2ef3985d40cb33613e8b6e9085de43250012adf892eee9",
+      "size": 10681,
+      "uploaded_at": "2026-10-11T21:57:50+00:00"
+    }
+  }
+}

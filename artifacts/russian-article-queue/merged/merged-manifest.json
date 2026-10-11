@@ -1,0 +1,19 @@
+{
+  "language": "ru-RU",
+  "articles": 1016,
+  "pending_not_included": 0,
+  "files": {
+    "russian-all-articles.zip": {
+      "bytes": 6151289,
+      "sha256": "4c6af0a4b40443500623e16a2fff6cfd3ae2aca30943111f5d8eb4b3614063c4"
+    },
+    "russian-all-articles-rollback.zip": {
+      "bytes": 10681,
+      "sha256": "08e00934164572648a2ef3985d40cb33613e8b6e9085de43250012adf892eee9"
+    }
+  },
+  "source_ids_first_last": [
+    "crop-001",
+    "xref-548"
+  ]
+}
