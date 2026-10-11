@@ -6,16 +6,30 @@ from agnes_json_client import parse_object
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE=os.getenv('AGNES_API_BASE','https://apihub.agnes-ai.com/v1').rstrip('/')
-TOKENS=[]
+TOKENS=[];TOKEN_SLOTS={}
 # Supports AGNES_API_KEY plus AGNES_API_KEY2..AGNES_API_KEY50 (25 configured).
 for _name in ['AGNES_API_KEY',*[f'AGNES_API_KEY{i}' for i in range(2,51)]]:
     _value=os.environ.get(_name,'').strip()
-    if _value and _value not in TOKENS:TOKENS.append(_value)
+    if _value and _value not in TOKENS:TOKENS.append(_value);TOKEN_SLOTS[_value]=_name
 TOKEN=TOKENS[0] if TOKENS else ''
 _TOKEN_COUNTER=itertools.count();_TOKEN_LOCK=threading.Lock()
+# Keys rejected with 401/403 are skipped for the rest of this run so one bad
+# secret cannot fail every Nth request. Only the secret *name* is logged.
+BAD_TOKENS=set()
+def active_tokens():
+    return [t for t in TOKENS if t not in BAD_TOKENS]
 def next_token():
     if not TOKENS:raise RuntimeError('No Agnes API key is configured')
-    with _TOKEN_LOCK:return TOKENS[next(_TOKEN_COUNTER)%len(TOKENS)]
+    with _TOKEN_LOCK:
+        pool=active_tokens()
+        if not pool:raise RuntimeError('All Agnes API keys were rejected (401/403): '+', '.join(sorted(TOKEN_SLOTS[t] for t in BAD_TOKENS)))
+        return pool[next(_TOKEN_COUNTER)%len(pool)]
+def disable_token(token,code):
+    with _TOKEN_LOCK:
+        if token not in TOKENS or token in BAD_TOKENS:return
+        BAD_TOKENS.add(token)
+    print(f'agnes_key_disabled secret={TOKEN_SLOTS.get(token,"?")} http={code} active={len(active_tokens())}/{len(TOKENS)}',flush=True)
+print(f'agnes_keys_loaded={len(TOKENS)}',flush=True)
 MODEL=os.getenv('AGNES_MODEL','agnes-3.0-flash').strip()
 LIMIT=max(1,int(os.getenv('MAX_ARTICLES','1')))
 STATE=ROOT/'state/progress.json'
@@ -38,16 +52,28 @@ def request_json(url,payload=None,authenticated=False):
     data=None if payload is None else json.dumps(payload,ensure_ascii=False).encode('utf-8')
     headers={'Accept':'application/json','User-Agent':'navar-abyari-actions'}
     if payload is not None: headers['Content-Type']='application/json'
-    if authenticated: headers['Authorization']=f'Bearer {next_token()}'
+    token=next_token() if authenticated else ''
+    if authenticated: headers['Authorization']=f'Bearer {token}'
     attempts=3 if authenticated else 1
     last=None
-    for attempt in range(1,attempts+1):
+    attempt=0;key_swaps=0
+    while attempt<attempts:
+        attempt+=1
         req=urllib.request.Request(url,data=data,headers=headers)
         try:
             with urllib.request.urlopen(req,timeout=240) as response:return json.load(response)
         except urllib.error.HTTPError as exc:
             detail=exc.read().decode('utf-8','replace');last=exc
-            print(f'HTTP {exc.code} on {url}: {detail}',flush=True)
+            print(f'HTTP {exc.code} on {url}: {detail[:300]}',flush=True)
+            if authenticated and exc.code in (401,403):
+                # Invalid/unauthorized key: quarantine it and retry at once with
+                # another key without consuming a normal retry attempt.
+                disable_token(token,exc.code)
+                if active_tokens() and key_swaps<len(TOKENS):
+                    key_swaps+=1;attempt-=1
+                    token=next_token();headers['Authorization']=f'Bearer {token}'
+                    continue
+                raise
             if exc.code not in (408,429,500,502,503,504) or attempt>=attempts:raise
             retry_after=exc.headers.get('Retry-After') if exc.headers else None
             delay=int(retry_after) if retry_after and retry_after.isdigit() else 45*attempt

@@ -37,20 +37,38 @@ TABLE = "ha_posts"; META = "ha_postmeta"
 # Agnes config (same as city queue)
 AGNES_BASE = (os.getenv("AGNES_API_BASE") or "https://apihub.agnes-ai.com/v1").rstrip("/")
 AGNES_KEYS = []
+AGNES_KEY_SLOTS = {}
 # Supports AGNES_API_KEY plus AGNES_API_KEY2..AGNES_API_KEY50 (25 configured).
 for _name in ["AGNES_API_KEY", *[f"AGNES_API_KEY{i}" for i in range(2, 51)]]:
     _value = os.getenv(_name, "").strip()
     if _value and _value not in AGNES_KEYS:
         AGNES_KEYS.append(_value)
+        AGNES_KEY_SLOTS[_value] = _name
 AGNES_KEY = AGNES_KEYS[0] if AGNES_KEYS else ""
 _KEY_COUNTER = itertools.count()
 _KEY_LOCK = threading.Lock()
+# Keys rejected with 401/403 are skipped for the rest of the run; only the
+# secret name is ever logged.
+BAD_AGNES_KEYS = set()
+
+def active_agnes_keys():
+    return [k for k in AGNES_KEYS if k not in BAD_AGNES_KEYS]
 
 def next_agnes_key():
     if not AGNES_KEYS:
         raise RuntimeError("No Agnes API key is configured")
     with _KEY_LOCK:
-        return AGNES_KEYS[next(_KEY_COUNTER) % len(AGNES_KEYS)]
+        pool = active_agnes_keys()
+        if not pool:
+            raise RuntimeError("All Agnes API keys were rejected (401/403): " + ", ".join(sorted(AGNES_KEY_SLOTS[k] for k in BAD_AGNES_KEYS)))
+        return pool[next(_KEY_COUNTER) % len(pool)]
+
+def disable_agnes_key(key, code):
+    with _KEY_LOCK:
+        if key not in AGNES_KEY_SLOTS or key in BAD_AGNES_KEYS:
+            return
+        BAD_AGNES_KEYS.add(key)
+    print(f"agnes_key_disabled secret={AGNES_KEY_SLOTS[key]} http={code} active={len(active_agnes_keys())}/{len(AGNES_KEYS)}", flush=True)
 
 AGNES_MODEL = os.getenv("AGNES_MODEL") or "agnes-3.0-flash"
 
@@ -95,16 +113,26 @@ def now():
 
 
 def fetch_json(url, headers=None, payload=None, timeout=420):
-    req = urllib.request.Request(
-        url,
-        data=(json.dumps(payload, ensure_ascii=False).encode() if payload is not None else None),
-        headers=headers or {},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return json.load(r)
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"HTTP {e.code} {url}: {e.read().decode('utf-8','replace')[:800]}")
+    headers = dict(headers or {})
+    data = json.dumps(payload, ensure_ascii=False).encode() if payload is not None else None
+    for _swap in range(len(AGNES_KEYS) + 1):
+        req = urllib.request.Request(url, data=data, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode('utf-8','replace')[:800]
+            auth = str(headers.get("Authorization", ""))
+            key = auth[7:] if auth.startswith("Bearer ") else ""
+            if e.code in (401, 403) and key in AGNES_KEY_SLOTS:
+                # One invalid secret must not fail every Nth request: quarantine
+                # it and retry immediately with another pool key.
+                disable_agnes_key(key, e.code)
+                if active_agnes_keys():
+                    headers["Authorization"] = "Bearer " + next_agnes_key()
+                    continue
+            raise RuntimeError(f"HTTP {e.code} {url}: {detail}")
+    raise RuntimeError(f"HTTP 401 {url}: no usable Agnes API key")
 
 
 def normalize(s):
