@@ -2,22 +2,24 @@
 
 > صف مستقل؛ ترجمه روسی مقالات فارسی تکمیل‌شده. این صف صف تولید فارسی و صف ترجمه عربی/تاجیکی/انگلیسی را متوقف نمی‌کند.
 
-- آخرین بروزرسانی: `2026-10-11T17:07:53+00:00`
+- آخرین بروزرسانی: `2026-10-11T17:15:00+00:00`
 - وضعیت صف: **فعال**
-- پیشرفت: **368 از 1016 (36.22٪)**
+- پیشرفت: **382 از 1016 (37.60٪)**
 - نمودار پیشرفت: `███████░░░░░░░░░░░░░`
-- باقی‌مانده: **648**
-- مقالات با تلاش ناموفق (در صف تلاش مجدد): **40**
+- باقی‌مانده: **634**
+- مقالات با تلاش ناموفق (در صف تلاش مجدد): **42**
 - مدل متن: `agnes-3.0-flash` — اندازه هر اجرا: **16 مقاله** با **8** کارگر موازی
 - مسیر وردپرس: `/ru/` — دسته: `ru`
 - بسته‌های ۵۰تایی آماده: **0** — آپلودشده با FTPS: **0**
 
 ## آخرین اجرا
 
-- انتخاب‌شده: **16** — موفق: **15** — ناموفق: **1** — `2026-10-11T17:07:53+00:00`
+- انتخاب‌شده: **16** — موفق: **14** — ناموفق: **2** — `2026-10-11T17:15:00+00:00`
 
 ## خطاهای اخیر
 
+- `xref-080` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
+- `xref-099` — تلاش: **1** — `RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized`
 - `xref-095` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `xref-075` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `xref-078` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
@@ -26,8 +28,6 @@
 - `strat-033` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `strat-016` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `strat-017` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
-- `strat-030` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
-- `strat-024` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 
 ## فایل‌ها
 
