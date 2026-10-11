@@ -1,0 +1,17 @@
+{
+  "posts_per_language": {
+    "ru-RU": 1016
+  },
+  "posts_total": 1016,
+  "figures": 3048,
+  "files": {
+    "navar-image-text-fix.zip": {
+      "bytes": 196737,
+      "sha256": "1f66bad65494ae7dd8ff5c33144f692ffe1bc6c1c4eded08599180362cb6c94f"
+    },
+    "navar-image-text-fix-rollback.zip": {
+      "bytes": 198270,
+      "sha256": "cbeedd86a351135ab42d126c51c6233a632135e9b39ef9837f6f432a251d1fcd"
+    }
+  }
+}

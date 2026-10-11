@@ -1,0 +1,14 @@
+{
+  "files": {
+    "navar-image-text-fix.zip": {
+      "sha256": "1f66bad65494ae7dd8ff5c33144f692ffe1bc6c1c4eded08599180362cb6c94f",
+      "size": 196737,
+      "uploaded_at": "2026-10-11T23:17:47+00:00"
+    },
+    "navar-image-text-fix-rollback.zip": {
+      "sha256": "cbeedd86a351135ab42d126c51c6233a632135e9b39ef9837f6f432a251d1fcd",
+      "size": 198270,
+      "uploaded_at": "2026-10-11T23:17:49+00:00"
+    }
+  }
+}
