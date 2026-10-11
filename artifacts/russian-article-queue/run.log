@@ -1,16 +1,15 @@
-russian_repaired_artifacts=167
-russian_batch=8 workers=4 pending=849
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1973 (char 1972)
-russian_translation source=crop-214 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 678 (char 677)
-russian_translation source=crop-209 language=ru-RU
-russian_translation source=crop-202 language=ru-RU
-russian_translation source=crop-215 language=ru-RU
-russian_translation source=crop-216 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1570 (char 1569)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 716 (char 715); Expecting ',' delimiter: line 1 column 716 (char 715)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 879 (char 878)
-russian_translation source=crop-230 language=ru-RU
-russian_translation source=crop-223 language=ru-RU
-russian_translation source=crop-227 language=ru-RU
-{"completed": 175, "pending": 841, "progress_percent": 17.22}
+russian_repaired_artifacts=175
+russian_batch=8 workers=4 pending=841
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 393 (char 392)
+russian_translation source=crop-224 language=ru-RU
+russian_translation source=crop-229 language=ru-RU
+russian_translation source=crop-226 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 759 (char 758)
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+russian_translation source=crop-231 language=ru-RU
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+russian_translation source=crop-228 language=ru-RU
+russian_translation source=crop-219 language=ru-RU
+russian_translation source=crop-232 language=ru-RU
+russian_translation source=crop-220 language=ru-RU
+{"completed": 183, "pending": 833, "progress_percent": 18.01}
