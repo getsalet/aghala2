@@ -1,16 +1,15 @@
-russian_repaired_artifacts=87
-russian_batch=8 workers=4 pending=929
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 611 (char 610)
-russian_translation source=crop-110 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 834 (char 833)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0)
-Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 612 (char 611)
-russian_translation source=crop-108 language=ru-RU
-russian_translation source=crop-106 language=ru-RU
-russian_translation source=crop-109 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 495 (char 494)
-russian_translation source=crop-115 language=ru-RU
-russian_translation source=crop-111 language=ru-RU
-russian_translation source=crop-117 language=ru-RU
-russian_translation source=crop-113 language=ru-RU
-{"completed": 95, "pending": 921, "progress_percent": 9.35}
+russian_repaired_artifacts=95
+russian_batch=8 workers=4 pending=921
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 185 (char 184)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1621 (char 1620)
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 869 (char 868)
+russian_translation source=crop-114 language=ru-RU
+russian_translation source=crop-118 language=ru-RU
+russian_translation source=crop-121 language=ru-RU
+russian_translation source=crop-119 language=ru-RU
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+russian_translation source=crop-116 language=ru-RU
+russian_translation source=crop-130 language=ru-RU
+russian_translation source=crop-128 language=ru-RU
+russian_translation source=crop-125 language=ru-RU
+{"completed": 103, "pending": 913, "progress_percent": 10.14}
