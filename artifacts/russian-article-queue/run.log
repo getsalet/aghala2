@@ -1,292 +1,320 @@
-russian_repaired_artifacts=368
-russian_batch=16 workers=8 pending=648
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170919681171289N7CZ1dgW)","type":"AgnesAI_error"}}
+russian_repaired_artifacts=382
+russian_batch=16 workers=8 pending=634
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117162028369701401d2pD6e)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 6 column 14 (char 515)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170923451368416priDT76F)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170923896751651AjGzk6JF)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170924263252010cOMVBCJu)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170925258331549eOG3ztZJ)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170925624019101955bdmyH)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170926360674163VcAweI7P)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111709267893919876Vmdjppk)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117092766327760185J1ucQY)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170928544030828fy6WG8II)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170929477391174Ar5VWqQ6)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170929838551350VPfbEn4l)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 94 (char 93)
-Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 509 (char 508)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170946500154628GXoNWBuN)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170947838676579vECDYPn6)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117094942866638087cW8mSf)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170950334284362dkotR02H)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111709505037454766ajBNGqV)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170950707943752MQnTz7lj)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170951585001WRIX0Z5P)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117095251008765PjeQSMm6)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170953645233371P5brXJES)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170954543757119eCKzxpDZ)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170954724307135ruOHjNke)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011170955211261161pjaLY4vb)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171013265794373Pj7XliJw)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111710165090216457YyII4Rx)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171017483690094y0PiOlrY)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171017504528361sebMTiWn)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171018401121647A593qeNQ)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111710191632766606JyhGxBC)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171020727174215UesEhSLe)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171021713432621RejSWtyc)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171022627348187j8C4QKQ2)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171023375212564OZbGbvFd)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117102591351347vTcacq3s)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171025694898884hJEei69w)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-Plain-text fallback succeeded for segment 40 in ru-RU
-Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); JSON root must be an object; Extra data: line 4 column 4 (char 437)
-russian_translation source=xref-106 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111710387133091802SobCcDt)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171041418429595QDtuwsrC)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171042926382512XPmFD5np)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117104456197095lKwNlq6M)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171044662564090mbQo52dL)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171045630798981oDMIGuwp)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171046315652883593HYL7o)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171047947476834dxKNO2x5)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171048277184346JBlabPYk)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111710488756102403UmKjqNK)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171050677950257zvtxlOJQ)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171051143159382scIf0KjJ)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-115 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111711004094279684Fdjero2)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171100713413292TcaKCNxc)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171102334398482qvqCSl8c)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171104346730978VzCraTwC)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171104623546657OYa6kfLU)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171104935360753nxKuz6VD)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171106553478171FKHbmnK8)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111711085625375996qlgqHxr)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171111956260046dfyZRhon)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171112837691778jSw7NNIi)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117111358091717akiAGacZ)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117111364671345jKK98yDD)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-105 language=ru-RU
-Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1085 (char 1084)
-russian_translation source=xref-090 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171124662581392G4aNy82d)","type":"AgnesAI_error"}}
-Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-110 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171126205261923tx4C94Q)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171126148787952Q1OvO7IQ)","type":"AgnesAI_error"}}
-Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171126751526393apiU21n2)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171126924461851RcocIu6j)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171128883902401GE6otvUg)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111716237378906110hQh2Lu4)","type":"AgnesAI_error"}}
 Metadata attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171130232652848QegNbcV5)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171624582872682dBELW7SH)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171130355899853sjnnTQRU)","type":"AgnesAI_error"}}
-Metadata attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1059 (char 1058)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171130961826411xp9OERWr)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171625799851199iVyzRjRN)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171626966029838hioXpn3v)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171628113929254bvLGayiD)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171628186541320wSHwYdjv)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 476 (char 475)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117163077008056ski0trPV)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171131133775522Mac5fBRT)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171631260025638TYocojVA)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171134974088078bW9mQHtg)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117113793850604c0Is8VNI)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111716313539583126HSvvmmD)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117163262901136E4FZFPfu)","type":"AgnesAI_error"}}
 Metadata attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation_failed source=xref-099: RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized
-russian_translation source=xref-109 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171148909731892ERpXxJ1X)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171148948470217hwYfz6Wd)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171149293409387ZjdsmLPA)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-111 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171149530625179k288YiO6)","type":"AgnesAI_error"}}
+russian_translation_failed source=xref-116: RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171632361678491RKAYLdCp)","type":"AgnesAI_error"}}
 Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171153133844760FwECaqAl)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 474 (char 473)
+Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 332 (char 331)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171648441455532F6l4EDyS)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171648679540269denyJ2sY)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171651986916842tN6HYG6S)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171652265713910nqIU1BBo)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171652741718114eMEtOoJD)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171153163235274hN9M522w)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171652976855736nv2XGu3F)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171153505581300OYNihgfE)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117165351215916nLnz7ouk)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171653789546220Cdu7Jgbt)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117165551475167067vd0gNJ)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111716559378167796BPPYVsu)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171656549656273KfNGlZCz)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171153743705441Xl7EOid5)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171657370834487wB3sT6wh)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 864 (char 863)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171710271227184Ec6hmQkb)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1357 (char 1356)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117171295468199f657KN9D)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171712361537352WqeYFyMh)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117171398230327e08kA1Ny)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171713167212820hW5utF0b)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171713846676303p4SG5FtB)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171714588084051vlLAIH4G)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717163997993259gOonmt5)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171716657238863ff0eIE0t)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171717405792349PwDP6QbW)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171717450995865dEr0cxSj)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171718614036217ywfIQsTR)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 754 (char 753)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171735154229922Q3jnDblK)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171735598362690SEjae0M7)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171735689544079GvUhnFRz)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717357814514621ZQztjY1)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171736110877904iwFr66Ka)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); JSON root must be an object; Extra data: line 1 column 124 (char 123)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171737806497239KMcPB3g5)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171738727125411V9fNnXxr)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171739458555035AD2Qxyxt)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171739893773418aB22MS3C)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171739995768076GK4PqIW1)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717404137004172bJo9aqp)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717407324733513IVU9F8I)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-122 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717534727500815szSPKm3)","type":"AgnesAI_error"}}
+Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-120 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171754127591540omezLy6p)","type":"AgnesAI_error"}}
+Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171755889432395041RbMt1)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171756701282033PZnpvyta)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171757767623129hXZIGoQp)","type":"AgnesAI_error"}}
 Metadata attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712005485271ZSPtoOi3)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117175878328016C5fum4YD)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171200456731709KEYdmceQ)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111717584232347158aLRKYxQ)","type":"AgnesAI_error"}}
+Metadata attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171800217222760LtWN1uZJ)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171800991632201bNyZBPQd)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171801649101292HO4UWpLa)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171201361926733nJTWO3OV)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171803140065617cg7g4KHA)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171805940933552cy84IAoa)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-121 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 403 (char 402)
+russian_translation source=xref-124 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171818794673447FckyeFFn)","type":"AgnesAI_error"}}
+Metadata attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171819426297186MfOcHkvO)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171819624526703CFAggN93)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117182064264245g2gaeWvu)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171820441756542JZxtzopI)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171821454146630BB6GjgPf)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117182365394197jmVIjirA)","type":"AgnesAI_error"}}
+Metadata attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171823705750934qUBSNXSv)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111718239472774096eGJ6SGa)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171824370925442mNqwb6hB)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111718246454425150S9er8TR)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171824742365067YGTrFZED)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-126 language=ru-RU
+Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1012 (char 1011); Expecting ',' delimiter: line 1 column 1011 (char 1010)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111718411871475541vxKt0BL)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171842499328668hIk9a0oZ)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111718425674568624B9eG7LP)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171844831725426ung57Wv)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171845395781658mfjFqb1J)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171845488489709zxdfZKH5)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171846801924351VJ0mjZYk)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171846844838301KjUk2VzX)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111718475292472296WhVFNTe)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171848382109423OU5E2VPC)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171849702660273F0s2y8xE)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117185118028709RvoAEeQN)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1470 (char 1469)
+russian_translation source=xref-118 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171904351226297q7LRRQ8A)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171906270554250QxIVAgiK)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171906965991360mqkUXK9Y)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1464 (char 1463)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111719086284509786cDU3f1v)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171909751732284Ig8Vd3UZ)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171910568909420cC3BxDtH)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111719112390505703rf9KxWW)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171911965921244iFxNxWW7)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117191467037571uecFGphg)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171915741644389N3ONchNU)","type":"AgnesAI_error"}}
 Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712013861875233fNR0coh)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117191627943838XKUvn8nG)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117191667803586v9dO8HwF)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-119 language=ru-RU
+russian_translation source=xref-117 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171928736076830Ql97rY7L)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171929573828501D9lb07UD)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117193025020466ucVzEEG5)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171930564512733GzA39h0A)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117193331364736N2n7NH4U)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171933129055643kMhav7V1)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171933769632731z9BQwlJS)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171933865562596c6uX4tjX)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171934332971166dvxggVS1)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171934863183854EPj2WIBx)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171937404737613PQoEbLUV)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117193839751033eztdV12L)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 736 (char 735)
+russian_translation source=xref-134 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171956889559801bTdaswRI)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171958413060022a6uHM1Aa)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172001203534613v3ZlxRCt)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172001958459971H4ExSSb2)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172002140068847wUBZgkKO)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172002693024554uhigDzAt)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172006257664867feLGFeAq)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172006440687714XbNlV27F)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117200673332779741jAJZkT)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172009507255634xPxSrsq6)","type":"AgnesAI_error"}}
 Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171213720950081O2ioqL4v)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172009771575257vVPplA4B)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117121542653958aOocUkDg)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117121558855894iy8D5XVQ)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171216773824489DPcQR51m)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171217688414576x8oXqtP1)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712179373018837qnNA6Mn)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171219119276985Y9Vcp8Dq)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171219266864223PhvQEDIc)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171219265245246beL21W8l)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712215366610TiMGeM1K)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712219077007829i8EV9CQ)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712233345585049T3f4ECt)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-103 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171243520105762LNVv02BT)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171245964542916SQ4uNWC2)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171246169426835k97R9gRu)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171246553364651zR6veQm1)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171247742053812U5JGfKeU)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171248636569237emYo6l7c)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171250201653964XXe6DomI)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111712503904139350GXH973j)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171250492846460mMB0IhTx)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171250776406283OUopcxpU)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171252848250773whK7e6vv)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171254779726868h4ONtdoX)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-113 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Unterminated string starting at: line 1 column 677 (char 676); Expecting ',' delimiter: line 1 column 660 (char 659)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171310775542043LumCdc9e)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-108 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171312614045319gsdWsRjK)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171313120470432gXHeHHhm)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111713149867263741OGMWL3J)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111713173405336920IhnUQLT)","type":"AgnesAI_error"}}
-Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171318686479944QQInRn5m)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171320404253590LcXzzo6d)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171320833619522OHoH6iDK)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117201160538o9E6eLZK)","type":"AgnesAI_error"}}
 Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117132155581049zqzQwq9a)","type":"AgnesAI_error"}}
+russian_translation source=xref-130 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172035244862607eyXMlckk)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171322896824549GJjFXqxW)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111720365869323976FgCap7d)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172036917444875EGTPju3f)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172039522658782NrepN1kY)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171323255472281Nj7gasqZ)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171323474063197vxdXQT56)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-russian_translation source=xref-102 language=ru-RU
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171354297252866yKnfvsCz)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111713574781924375yOqhZPA)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171357668170403RIEerTpi)","type":"AgnesAI_error"}}
-Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171358515359104LKm4z5lc)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172040901094696dHS0AVos)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171401693804020elPh1bzQ)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111720412008565216drXdB3t)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171401887817862RMQ89GFl)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172047806528291cSV70DFc)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111720481368794788YEx2o2F)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172049190029199nFvQUkII)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172049344203678E0vjBsKM)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172049479160036Aw68aNBL)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111720494918763515AjuSJvy)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-140 language=ru-RU
+russian_translation source=xref-123 language=ru-RU
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172113514532346xQAHxxVh)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172117868666999MJDpnHGw)","type":"AgnesAI_error"}}
 Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111714067303840145Mi7OVf9)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171406957535783LgA1x6SY)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172120740098600y39lGPsN)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171409922439669DSthFdoU)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171410115858995lCT5tFpl)","type":"AgnesAI_error"}}
-Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171410132249644IzFElnwU)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172123830433388EN7UsUzG)","type":"AgnesAI_error"}}
 Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011171410333245257q5eMugv8)","type":"AgnesAI_error"}}
-russian_translation_failed source=xref-080: RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized
-russian_translation source=xref-100 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Unterminated string starting at: line 1 column 33 (char 32)
-russian_translation source=xref-131 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 449 (char 448)
-russian_translation source=xref-098 language=ru-RU
-{"completed": 382, "pending": 634, "progress_percent": 37.6}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101117212554464773Kpo84c33)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111721261296646339BwLoFVs)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172126443211533ipi6hj9g)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172128115576158qfp9swTU)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111721307519287080etU8m3a)","type":"AgnesAI_error"}}
+Segment attempt 2 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111721333885758090KQEleSb)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011172133682476667n8pSLkwb)","type":"AgnesAI_error"}}
+Segment attempt 1 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111721364185346646gVxj7Vk)","type":"AgnesAI_error"}}
+Segment attempt 3 failed for ru-RU: HTTPError: HTTP Error 401: Unauthorized
+russian_translation source=xref-127 language=ru-RU
+russian_translation source=xref-135 language=ru-RU
+russian_translation source=xref-141 language=ru-RU
+{"completed": 397, "pending": 619, "progress_percent": 39.07}
