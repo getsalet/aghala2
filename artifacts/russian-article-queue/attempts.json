@@ -128,5 +128,20 @@
     "attempts": 1,
     "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
     "updated_at": "2026-10-11T16:04:02+00:00"
+  },
+  "prod-071": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T16:13:19+00:00"
+  },
+  "prod-089": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T16:16:29+00:00"
+  },
+  "prod-079": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T16:16:41+00:00"
   }
 }
