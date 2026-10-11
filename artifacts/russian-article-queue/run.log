@@ -1,15 +1,13 @@
-russian_repaired_artifacts=183
-russian_batch=8 workers=4 pending=833
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 335 (char 334)
-russian_translation source=crop-235 language=ru-RU
-russian_translation source=crop-225 language=ru-RU
-Segment attempt 1 failed for ru-RU: KeyError: 'translations'
-russian_translation source=crop-239 language=ru-RU
-russian_translation source=crop-218 language=ru-RU
-russian_translation source=crop-234 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1181 (char 1180)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 392 (char 391); Expecting ',' delimiter: line 1 column 391 (char 390)
-russian_translation source=crop-242 language=ru-RU
-russian_translation source=crop-236 language=ru-RU
-russian_translation source=crop-247 language=ru-RU
-{"completed": 191, "pending": 825, "progress_percent": 18.8}
+russian_repaired_artifacts=191
+russian_batch=8 workers=4 pending=825
+russian_translation source=crop-245 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: Segment IDs changed: expected {41, 42, 43, 44, 45, 46, 47, 48}, got {48, 42, 43, 44, 45, 46, 47}
+russian_translation source=crop-246 language=ru-RU
+russian_translation source=crop-238 language=ru-RU
+russian_translation source=crop-243 language=ru-RU
+Metadata attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Invalid \uXXXX escape: line 1 column 1497 (char 1496)
+russian_translation source=crop-240 language=ru-RU
+russian_translation source=crop-249 language=ru-RU
+russian_translation_failed source=crop-248: ValueError: Russian validation failed: untranslated Persian text remains
+russian_translation source=crop-244 language=ru-RU
+{"completed": 198, "pending": 818, "progress_percent": 19.49}

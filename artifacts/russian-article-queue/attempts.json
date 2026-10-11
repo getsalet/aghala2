@@ -3,5 +3,10 @@
     "attempts": 1,
     "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
     "updated_at": "2026-10-11T11:19:27+00:00"
+  },
+  "crop-248": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T15:00:29+00:00"
   }
 }
