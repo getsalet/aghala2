@@ -11,6 +11,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+import image_caption_policy
+
 ROOT = Path(__file__).resolve().parents[1]
 IMAGES = ROOT / "artifacts" / "article-content-queue" / "images"
 SITE = (os.getenv("WP_SITE_URL") or "https://navar-abyari.ir").rstrip("/")
@@ -109,8 +111,8 @@ def upload_media(image: dict, item: dict, index: int):
     updated = request_json("POST", f"/media/{media_id}", payload={
         "slug": slug,
         "title": f"{item['title']} - تصویر {index}",
-        "alt_text": f"{item['title']} - تصویر {index}",
-        "caption": item.get("focus", ""),
+        "alt_text": image_caption_policy.image_texts(item["title"], index, "fa-IR")[0],
+        "caption": image_caption_policy.image_texts(item["title"], index, "fa-IR")[1],
     })
     return updated or media
 
@@ -121,11 +123,7 @@ def render_html(item: dict, obj: dict, media_rows: list[dict]) -> str:
         url = media.get("source_url")
         if not url:
             raise RuntimeError(f"WordPress media {media.get('id')} has no source_url")
-        figure = (
-            f'<figure class="wp-block-image size-large">'
-            f'<img src="{url}" alt="{item["title"]} - تصویر {index}"/>'
-            f'<figcaption>{item.get("focus", "")}</figcaption></figure>'
-        )
+        figure = image_caption_policy.figure_html(url, item["title"], index, "fa-IR", media.get("id"))
         body = body.replace(f"[[[IMAGE_{index}]]]", figure)
     if "[[[IMAGE_" in body:
         raise RuntimeError("Unresolved image marker remains in article HTML")

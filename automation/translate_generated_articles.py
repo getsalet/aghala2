@@ -11,6 +11,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import image_caption_policy
 import translate_queue as translator
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -152,6 +153,9 @@ def build_sql(item: dict, translated: dict, lang: str) -> tuple[str, str]:
     final_fallback_slug = bounded_slug(slug, f"{collision_suffix}-{digest}")
     category_slug = LANGUAGE_CATEGORY_SLUG[lang]
     body = cleanup_translation_html(translated["html"], lang)
+    # Alt text + caption in the translation's own language ("<title> - <role>"),
+    # not the Persian alt and internal focus keyword copied from the source.
+    body = image_caption_policy.normalize_figures(body, translated.get("title", ""), lang)
     lines = [
         "START TRANSACTION;",
         f"SET @source_post_id=(SELECT post_id FROM `ha_postmeta` WHERE meta_key='_navar_queue_item_id' AND meta_value='{esc(source_key)}' LIMIT 1);",

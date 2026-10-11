@@ -1,0 +1,72 @@
+name: Build image alt/caption repair SQL and upload via FTPS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'automation/image-text-fix-trigger.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-text-fix-package-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FTP_HOST: ftp.navar-abyari.ir
+  FTP_PORT: '21'
+  FTP_USER: zzz@navar-abyari.ir
+  FTP_REMOTE_DIR: /
+  FTP_TLS_VERIFY: 'false'
+
+jobs:
+  build-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Build image alt/caption repair package
+        env:
+          IMAGE_FIX_LANGS: ru-RU
+        run: python automation/build_image_text_fix_package.py
+      - name: Keep a copy as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: navar-image-text-fix
+          path: artifacts/image-text-fix/
+          retention-days: 30
+      - name: Upload package via FTPS
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          test -n "${FTP_PASSWORD:-}" || { echo "::error::FTP_PASSWORD secret is not configured"; exit 1; }
+          python automation/upload_image_text_fix_ftps.py
+      - name: Record package state
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          d=artifacts/image-text-fix
+          payload="$(mktemp -d)"
+          cp "$d/manifest.json" "$d/ftps-upload-state.json" "$payload/"
+          for attempt in 1 2 3 4 5; do
+            git fetch --depth=1 origin main
+            git reset --hard origin/main
+            mkdir -p "$d"
+            cp "$payload/manifest.json" "$payload/ftps-upload-state.json" "$d/"
+            git add -f "$d/manifest.json" "$d/ftps-upload-state.json"
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -q -m 'Record image alt/caption repair package upload [skip ci]'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 15))
+          done
+          exit 1

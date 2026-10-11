@@ -23,6 +23,7 @@ from agnes_json_client import call as agnes_json_call
 import image_prompt_policy
 import russian_status_section
 import image_quality_gate
+import image_caption_policy
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "artifacts" / "article-content-queue"
@@ -1078,7 +1079,7 @@ def sql_for(item, obj, images):
         urls.append(url)
         body = body.replace(
             f"[[[IMAGE_{i}]]]",
-            f'<figure class="wp-block-image size-large"><img src="{url}" alt="{item["title"]} - تصویر {i}"/><figcaption>{item["focus"]}</figcaption></figure>'
+            image_caption_policy.figure_html(url, item["title"], image_caption_policy.role_index(url, i), "fa-IR")
         )
     pt = item["post_type"]; slug = item["slug"]
     queue_key = f"article-content-queue:{item['id']}"
