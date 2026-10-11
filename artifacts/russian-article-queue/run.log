@@ -1,18 +1,15 @@
-russian_repaired_artifacts=63
-russian_batch=8 workers=4 pending=953
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 455 (char 454)
-Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 471 (char 470)
-Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 496 (char 495)
-Segment attempt 1 failed for ru-RU: ValueError: Segment IDs changed: expected {45, 46, 47, 48, 49, 50, 51, 52}, got {6, 45, 47, 48, 49, 50, 51, 52}
-russian_translation source=crop-083 language=ru-RU
-russian_translation source=crop-084 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 349 (char 348)
-russian_translation source=crop-080 language=ru-RU
-russian_translation source=crop-078 language=ru-RU
-russian_translation source=crop-082 language=ru-RU
-russian_translation source=crop-081 language=ru-RU
-russian_translation source=crop-086 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1144 (char 1143)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 471 (char 470)
-russian_translation source=crop-088 language=ru-RU
-{"completed": 71, "pending": 945, "progress_percent": 6.99}
+russian_repaired_artifacts=71
+russian_batch=8 workers=4 pending=945
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting property name enclosed in double quotes: line 9 column 7 (char 156)
+russian_translation source=crop-085 language=ru-RU
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 384 (char 383)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1355 (char 1354)
+russian_translation source=crop-087 language=ru-RU
+russian_translation source=crop-089 language=ru-RU
+russian_translation source=crop-090 language=ru-RU
+russian_translation source=crop-091 language=ru-RU
+russian_translation source=crop-093 language=ru-RU
+russian_translation source=crop-092 language=ru-RU
+russian_translation source=crop-095 language=ru-RU
+{"completed": 79, "pending": 937, "progress_percent": 7.78}
