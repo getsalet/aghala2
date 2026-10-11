@@ -28,5 +28,40 @@
     "attempts": 1,
     "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
     "updated_at": "2026-10-11T15:11:08+00:00"
+  },
+  "crop-274": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:17:50+00:00"
+  },
+  "crop-279": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:18:31+00:00"
+  },
+  "crop-296": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:19:37+00:00"
+  },
+  "crop-289": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:22:13+00:00"
+  },
+  "crop-287": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T15:22:40+00:00"
+  },
+  "crop-294": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:24:03+00:00"
+  },
+  "crop-290": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:24:17+00:00"
   }
 }
