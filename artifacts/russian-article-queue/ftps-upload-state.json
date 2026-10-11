@@ -94,6 +94,11 @@
       "sha256": "7ecae9dd6536e4e71c74ce74c89468181a61a92b7cfa4c2f56d92e0e524ee134",
       "size": 903239,
       "uploaded_at": "2026-10-11T20:30:09+00:00"
+    },
+    "russian-batch-020-sources-0951-1000.zip": {
+      "sha256": "038382bb8c45cafed56501f2f0fcd28a7734565b383c0296b3cc1de5e8c52ed0",
+      "size": 888117,
+      "uploaded_at": "2026-10-11T20:32:13+00:00"
     }
   }
 }
