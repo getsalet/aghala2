@@ -1,15 +1,16 @@
-russian_repaired_artifacts=95
-russian_batch=8 workers=4 pending=921
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 185 (char 184)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1621 (char 1620)
-Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 869 (char 868)
-russian_translation source=crop-114 language=ru-RU
-russian_translation source=crop-118 language=ru-RU
-russian_translation source=crop-121 language=ru-RU
-russian_translation source=crop-119 language=ru-RU
-Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
-russian_translation source=crop-116 language=ru-RU
-russian_translation source=crop-130 language=ru-RU
-russian_translation source=crop-128 language=ru-RU
-russian_translation source=crop-125 language=ru-RU
-{"completed": 103, "pending": 913, "progress_percent": 10.14}
+russian_repaired_artifacts=103
+russian_batch=8 workers=4 pending=913
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1064 (char 1063); Expecting ',' delimiter: line 1 column 1063 (char 1062)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1919 (char 1918)
+russian_translation source=crop-120 language=ru-RU
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1860 (char 1859)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1092 (char 1091)
+russian_translation source=crop-123 language=ru-RU
+russian_translation source=crop-122 language=ru-RU
+russian_translation source=crop-126 language=ru-RU
+russian_translation source=crop-124 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); JSON root must be an object; Extra data: line 4 column 4 (char 287)
+russian_translation source=crop-134 language=ru-RU
+russian_translation source=crop-141 language=ru-RU
+russian_translation source=crop-137 language=ru-RU
+{"completed": 111, "pending": 905, "progress_percent": 10.93}
