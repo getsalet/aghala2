@@ -113,5 +113,15 @@
     "attempts": 1,
     "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
     "updated_at": "2026-10-11T15:47:31+00:00"
+  },
+  "crop-343": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:51:25+00:00"
+  },
+  "crop-337": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:52:38+00:00"
   }
 }
