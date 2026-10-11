@@ -8,5 +8,25 @@
     "attempts": 1,
     "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
     "updated_at": "2026-10-11T15:00:29+00:00"
+  },
+  "crop-258": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:07:04+00:00"
+  },
+  "crop-278": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:08:29+00:00"
+  },
+  "crop-268": {
+    "attempts": 1,
+    "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
+    "updated_at": "2026-10-11T15:08:41+00:00"
+  },
+  "crop-265": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T15:11:08+00:00"
   }
 }
