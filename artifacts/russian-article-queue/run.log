@@ -1,16 +1,15 @@
-russian_repaired_artifacts=15
-russian_batch=8 workers=4 pending=1001
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 425 (char 424)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 278 (char 277)
-Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 398 (char 397)
-russian_translation source=crop-016 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 577 (char 576); Expecting ':' delimiter: line 1 column 577 (char 576)
-russian_translation source=crop-019 language=ru-RU
-russian_translation source=crop-018 language=ru-RU
-russian_translation source=crop-020 language=ru-RU
-Segment attempt 1 failed for ru-RU: KeyError: 'translations'
-russian_translation source=crop-022 language=ru-RU
-russian_translation source=crop-026 language=ru-RU
-russian_translation source=crop-021 language=ru-RU
-russian_translation source=crop-025 language=ru-RU
-{"completed": 23, "pending": 993, "progress_percent": 2.26}
+russian_repaired_artifacts=23
+russian_batch=8 workers=4 pending=993
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 591 (char 590)
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 597 (char 596)
+russian_translation source=crop-027 language=ru-RU
+russian_translation source=crop-028 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 448 (char 447)
+russian_translation source=crop-023 language=ru-RU
+russian_translation source=crop-024 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 984 (char 983)
+russian_translation source=crop-030 language=ru-RU
+russian_translation source=crop-033 language=ru-RU
+russian_translation source=crop-029 language=ru-RU
+russian_translation source=crop-031 language=ru-RU
+{"completed": 31, "pending": 985, "progress_percent": 3.05}
