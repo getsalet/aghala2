@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T20:32:08+00:00",
+  "updated_at": "2026-10-11T20:52:17+00:00",
   "language": "ru-RU",
   "route": "/ru/",
   "category_slug": "ru",
@@ -15,11 +15,11 @@
     "batch_size": 50,
     "ready_batches": 20
   },
-  "uploaded_packages": 19,
+  "uploaded_packages": 20,
   "last_run": {
-    "selected": 1,
-    "succeeded": 1,
+    "selected": 0,
+    "succeeded": 0,
     "failed": 0,
-    "finished_at": "2026-10-11T20:32:08+00:00"
+    "finished_at": "2026-10-11T20:52:17+00:00"
   }
 }

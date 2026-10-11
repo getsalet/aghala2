@@ -1,6 +1,3 @@
 agnes_keys_loaded=25
-russian_repaired_artifacts=1015
-russian_batch=1 workers=1 pending=1
-russian_translation source=xref-428 language=ru-RU
-russian_package_built=russian-batch-020-sources-0951-1000.zip
+russian_repaired_artifacts=1016
 {"completed": 1016, "pending": 0, "progress_percent": 100.0}
