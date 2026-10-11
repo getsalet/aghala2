@@ -2,22 +2,23 @@
 
 > صف مستقل؛ ترجمه روسی مقالات فارسی تکمیل‌شده. این صف صف تولید فارسی و صف ترجمه عربی/تاجیکی/انگلیسی را متوقف نمی‌کند.
 
-- آخرین بروزرسانی: `2026-10-11T19:59:31+00:00`
+- آخرین بروزرسانی: `2026-10-11T20:03:51+00:00`
 - وضعیت صف: **فعال**
-- پیشرفت: **906 از 1016 (89.17٪)**
-- نمودار پیشرفت: `█████████████████░░░`
-- باقی‌مانده: **110**
-- مقالات با تلاش ناموفق (در صف تلاش مجدد): **46**
+- پیشرفت: **921 از 1016 (90.65٪)**
+- نمودار پیشرفت: `██████████████████░░`
+- باقی‌مانده: **95**
+- مقالات با تلاش ناموفق (در صف تلاش مجدد): **47**
 - مدل متن: `agnes-3.0-flash` — اندازه هر اجرا: **16 مقاله** با **8** کارگر موازی
 - مسیر وردپرس: `/ru/` — دسته: `ru`
 - بسته‌های ۵۰تایی آماده: **0** — آپلودشده با FTPS: **0**
 
 ## آخرین اجرا
 
-- انتخاب‌شده: **16** — موفق: **16** — ناموفق: **0** — `2026-10-11T19:59:31+00:00`
+- انتخاب‌شده: **16** — موفق: **15** — ناموفق: **1** — `2026-10-11T20:03:51+00:00`
 
 ## خطاهای اخیر
 
+- `xref-428` — تلاش: **1** — `ValueError: Russian validation failed: untranslated Persian text remains`
 - `prod-090` — تلاش: **1** — `ValueError: Russian validation failed: untranslated Persian text remains`
 - `xref-510` — تلاش: **1** — `ValueError: Russian validation failed: untranslated Persian text remains`
 - `xref-437` — تلاش: **1** — `ValueError: Russian validation failed: untranslated Persian text remains`
@@ -27,7 +28,6 @@
 - `xref-095` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `xref-075` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 - `xref-078` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
-- `xref-056` — تلاش: **1** — `RuntimeError: Segment translation failed for ru-RU: JSON=HTTP Error 401: Unauthorized; plain=HTTP Error 401: Unauthorized`
 
 ## فایل‌ها
 
