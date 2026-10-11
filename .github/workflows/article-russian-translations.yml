@@ -60,7 +60,7 @@ jobs:
       - name: Validate Russian pipeline
         run: |
           test -n "$AGNES_API_KEY"
-          python -m py_compile automation/translate_queue.py automation/translate_generated_articles.py automation/translate_russian_articles.py automation/upload_russian_batches_ftps.py
+          python -m py_compile automation/translate_queue.py automation/translate_generated_articles.py automation/translate_russian_articles.py automation/upload_russian_batches_ftps.py automation/russian_status_section.py
           python -m unittest tests.test_translate_russian_articles
       - name: Translate next Russian slice
         shell: bash
@@ -94,6 +94,9 @@ jobs:
             git fetch --depth=1 origin main
             git reset --hard origin/main
             tar -xf "$payload/state.tar"
+            # Re-apply the Russian row/section on top of the latest main dashboard.
+            python automation/russian_status_section.py
+            git add -f artifacts/article-content-queue/STATUS.md
             git add -f "$q/translations" "$q/status.json" "$q/STATUS.md" "$q/attempts.json" "$q/run.log" 2>/dev/null || true
             git add -f "$q"/packages/*.zip "$q/packages/manifest.json" "$q/ftps-upload-state.json" 2>/dev/null || true
             if git diff --cached --quiet; then echo "No Russian queue changes."; exit 0; fi

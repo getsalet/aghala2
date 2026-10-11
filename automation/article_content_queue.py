@@ -21,6 +21,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from agnes_json_client import call as agnes_json_call
 import image_prompt_policy
+import russian_status_section
 import image_quality_gate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -443,16 +444,10 @@ def write_status(q, result):
         row = translation_data.get("languages", {}).get(lang, {})
         label, prefix = language_labels[lang]
         lines.append(f"| {label} (`{lang}`) | {row.get('completed', 0)} | {row.get('pending', done)} | `{prefix}` |")
-    russian_status = ROOT / "artifacts" / "russian-article-queue" / "status.json"
-    try:
-        russian = json.loads(russian_status.read_text(encoding="utf-8")) if russian_status.exists() else {}
-    except (OSError, ValueError):
-        russian = {}
+    russian = russian_status_section.load()
     if russian:
-        lines.append(
-            f"| روسی (`ru-RU`) — صف جداگانه | {russian.get('completed', 0)} | {russian.get('pending', 0)} | `/ru/` |"
-        )
-        lines += ["", "> صف ترجمه روسی مستقل اجرا می‌شود و صف تولید فارسی را متوقف نمی‌کند: [داشبورد صف روسی](../russian-article-queue/STATUS.md)"]
+        lines.append(russian_status_section.table_row(russian))
+        lines += [""] + russian_status_section.section_lines(russian)
 
     image_state = translation_data.get("images", {})
     lines += [

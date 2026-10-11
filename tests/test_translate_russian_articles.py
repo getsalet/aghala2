@@ -75,5 +75,24 @@ class RussianQueueTests(unittest.TestCase):
             self.assertNotIn("persian_queue_paused", status)
 
 
+
+class MainStatusSectionTests(unittest.TestCase):
+    def test_patch_adds_row_and_section_once(self):
+        import russian_status_section as section
+        text = (
+            "| انگلیسی (`en-US`) | 10 | 0 | `/en/` |\n\n## وضعیت بازطراحی تصاویر\n\n- x\n"
+        )
+        data = {"source_articles_completed": 10, "completed": 4, "pending": 6, "progress_percent": 40.0}
+        once = section.patch(text, data)
+        self.assertIn("| روسی (`ru-RU`) — صف جداگانه | 4 | 6 | `/ru/` |", once)
+        self.assertIn("**4 از 10 (40.00٪)**", once)
+        self.assertLess(once.index(section.START), once.index("## وضعیت بازطراحی تصاویر"))
+        data.update(completed=5, pending=5, progress_percent=50.0)
+        twice = section.patch(once, data)
+        self.assertEqual(twice.count(section.START), 1)
+        self.assertEqual(twice.count("| روسی (`ru-RU`)"), 1)
+        self.assertIn("| 5 | 5 |", twice)
+
+
 if __name__ == "__main__":
     unittest.main()
