@@ -1,0 +1,122 @@
+name: Generate Russian article translations (separate queue)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'automation/article-russian-translation-trigger.txt'
+  schedule:
+    # Picks up newly completed Persian articles and retries failed slices.
+    - cron: '41 * * * *'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  # Independent from article-translations.yml: never blocks or pauses the Persian queue.
+  group: article-russian-translations-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FTP_HOST: ftp.navar-abyari.ir
+  FTP_PORT: '21'
+  FTP_USER: zzz@navar-abyari.ir
+  FTP_REMOTE_DIR: /
+  FTP_TLS_VERIFY: 'false'
+
+jobs:
+  translate-ru:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
+      AGNES_API_KEY2: ${{ secrets.AGNES_API_KEY2 }}
+      AGNES_API_KEY3: ${{ secrets.AGNES_API_KEY3 }}
+      AGNES_API_KEY4: ${{ secrets.AGNES_API_KEY4 }}
+      AGNES_API_KEY5: ${{ secrets.AGNES_API_KEY5 }}
+      AGNES_API_KEY6: ${{ secrets.AGNES_API_KEY6 }}
+      AGNES_API_KEY7: ${{ secrets.AGNES_API_KEY7 }}
+      AGNES_API_KEY8: ${{ secrets.AGNES_API_KEY8 }}
+      AGNES_API_KEY9: ${{ secrets.AGNES_API_KEY9 }}
+      AGNES_API_KEY10: ${{ secrets.AGNES_API_KEY10 }}
+      AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
+      AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
+      AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
+      AGNES_API_BASE: ${{ vars.AGNES_API_BASE || 'https://apihub.agnes-ai.com/v1' }}
+      AGNES_MODEL: ${{ vars.AGNES_MODEL || 'agnes-3.0-flash' }}
+      # Conservative share of the Agnes key pool so the main queues keep headroom.
+      RUSSIAN_TRANSLATION_BATCH_SIZE: ${{ vars.RUSSIAN_TRANSLATION_BATCH_SIZE || '8' }}
+      RUSSIAN_TRANSLATION_WORKERS: ${{ vars.RUSSIAN_TRANSLATION_WORKERS || '4' }}
+      RUSSIAN_PACKAGE_BATCH_SIZE: '50'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Validate Russian pipeline
+        run: |
+          test -n "$AGNES_API_KEY"
+          python -m py_compile automation/translate_queue.py automation/translate_generated_articles.py automation/translate_russian_articles.py automation/upload_russian_batches_ftps.py
+          python -m unittest tests.test_translate_russian_articles
+      - name: Translate next Russian slice
+        shell: bash
+        run: |
+          mkdir -p artifacts/russian-article-queue
+          set +e
+          python automation/translate_russian_articles.py 2>&1 | tee artifacts/russian-article-queue/run.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          echo "RUSSIAN_RC=$rc" >> "$GITHUB_ENV"
+          if [ "$rc" -ne 0 ]; then echo "::warning::Russian slice had no successful article; progress and errors are still persisted."; fi
+      - name: Upload new Russian 50-article packages via FTPS
+        if: always()
+        shell: bash
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ -z "${FTP_PASSWORD:-}" ]; then echo "FTP_PASSWORD is not configured; packages stay in git."; exit 0; fi
+          python automation/upload_russian_batches_ftps.py || echo "::warning::Russian FTPS upload failed; it will retry next run."
+      - name: Persist Russian queue state
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          q=artifacts/russian-article-queue
+          payload="$(mktemp -d)"
+          tar -cf "$payload/state.tar" --exclude="$q/sql" --exclude="$q/rollback" "$q"
+          for attempt in 1 2 3 4 5; do
+            git fetch --depth=1 origin main
+            git reset --hard origin/main
+            tar -xf "$payload/state.tar"
+            git add -f "$q/translations" "$q/status.json" "$q/STATUS.md" "$q/attempts.json" "$q/run.log" 2>/dev/null || true
+            git add -f "$q"/packages/*.zip "$q/packages/manifest.json" "$q/ftps-upload-state.json" 2>/dev/null || true
+            if git diff --cached --quiet; then echo "No Russian queue changes."; exit 0; fi
+            git commit -q -m 'Update Russian article translation queue [skip ci]'
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push raced with another workflow; retrying ($attempt/5)."
+            sleep $((attempt * 15))
+          done
+          exit 1
+      - name: Continue Russian queue
+        if: always() && !cancelled()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          pending="${RUSSIAN_PENDING:-0}"; ok="${RUSSIAN_SUCCEEDED:-0}"
+          if [ "$pending" -gt 0 ] && [ "$ok" -gt 0 ]; then
+            echo "Russian backlog $pending; dispatching next slice."
+            sleep 20
+            gh workflow run article-russian-translations.yml --ref main
+          elif [ "$pending" -gt 0 ]; then
+            echo "No progress this run; the hourly schedule will retry after cooldown."
+          else
+            echo "Russian queue is up to date."
+          fi

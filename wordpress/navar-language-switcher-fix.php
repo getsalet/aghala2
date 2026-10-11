@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Navar Translation Link Fix
- * Description: Direct canonical switching across Persian, Arabic, Tajik and English without redirect chains.
- * Version: 2.0.0
+ * Description: Direct canonical switching across Persian, Arabic, Tajik, English and Russian without redirect chains.
+ * Version: 2.1.0
  */
 if (!defined('ABSPATH')) exit;
 
@@ -49,7 +49,7 @@ function navar_translation_targets($post_id) {
     ));
     foreach ($ids as $id) {
         $language = (string) get_post_meta($id, '_navar_translation_language', true);
-        if (in_array($language, array('ar-IQ','tg-TJ','en-US'), true)) $targets[$language] = absint($id);
+        if (in_array($language, array('ar-IQ','tg-TJ','en-US','ru-RU'), true)) $targets[$language] = absint($id);
     }
     return $targets;
 }
@@ -61,6 +61,7 @@ function navar_requested_language($raw) {
         'iraq'=>'ar-IQ','iq'=>'ar-IQ','ar'=>'ar-IQ','ar-iq'=>'ar-IQ','arabic'=>'ar-IQ',
         'tajikistan'=>'tg-TJ','tj'=>'tg-TJ','tg'=>'tg-TJ','tg-tj'=>'tg-TJ','tajik'=>'tg-TJ',
         'english'=>'en-US','en'=>'en-US','en-us'=>'en-US',
+        'russia'=>'ru-RU','russian'=>'ru-RU','ru'=>'ru-RU','ru-ru'=>'ru-RU',
     );
     return isset($map[$value]) ? $map[$value] : '';
 }
@@ -70,6 +71,7 @@ function navar_country_value($language) {
     if ($language === 'ar-IQ') return 'iraq';
     if ($language === 'tg-TJ') return 'tajikistan';
     if ($language === 'en-US') return 'english';
+    if ($language === 'ru-RU') return 'russia';
     return '';
 }
 

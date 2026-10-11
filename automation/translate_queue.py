@@ -108,6 +108,7 @@ def language_label(lang):
         'ar-IQ':'Iraqi Arabic in clear professional Modern Standard Arabic suitable for Iraqi farmers',
         'tg-TJ':'natural Tajik in Cyrillic script suitable for Tajik farmers',
         'en-US':'clear international technical English suitable for farmers and irrigation professionals',
+        'ru-RU':'natural professional Russian in Cyrillic script suitable for farmers and irrigation professionals',
     }[lang]
 
 class PreserveHTML(HTMLParser):
@@ -205,6 +206,11 @@ def translate_validated(source,lang):
     if lang=='ar-IQ' and len(re.findall(r'[ء-ي]',result['html']))<100: raise ValueError('Arabic script validation failed')
     if lang=='tg-TJ' and len(re.findall(r'[А-Яа-яҚқҒғҲҳҶҷӢӣӮӯ]',result['html']))<100: raise ValueError('Tajik script validation failed')
     if lang=='en-US' and len(re.findall(r'\b[A-Za-z]{2,}\b',result['html']))<100: raise ValueError('English text validation failed')
+    if lang=='ru-RU':
+        text=re.sub(r'<[^>]+>',' ',result['html'])
+        if len(re.findall(r'[А-Яа-яЁё]',text))<100: raise ValueError('Russian script validation failed')
+        if len(re.findall(r'[ҚқҒғҲҳҶҷӢӣӮӯ]',text))>10: raise ValueError('Russian validation failed: Tajik-specific letters found')
+        if len(PERSIAN.findall(text))>20: raise ValueError('Russian validation failed: untranslated Persian text remains')
     return result
 
 def main():

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Navar Sidebar Language Filter
  * Description: Prevents sidebar and secondary post lists from mixing Persian, Arabic and Tajik articles.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: Navar Abyari
  */
 if (!defined('ABSPATH')) exit;
@@ -14,6 +14,7 @@ function navar_sidebar_lang_normalize($value) {
         'iraq' => 'ar-IQ', 'iq' => 'ar-IQ', 'ar' => 'ar-IQ', 'ar-iq' => 'ar-IQ', 'arabic' => 'ar-IQ',
         'tajikistan' => 'tg-TJ', 'tj' => 'tg-TJ', 'tg' => 'tg-TJ', 'tg-tj' => 'tg-TJ', 'tajik' => 'tg-TJ',
         'english' => 'en-US', 'en' => 'en-US', 'en-us' => 'en-US',
+        'russia' => 'ru-RU', 'russian' => 'ru-RU', 'ru' => 'ru-RU', 'ru-ru' => 'ru-RU',
     );
     return isset($map[$value]) ? $map[$value] : '';
 }
@@ -27,7 +28,7 @@ function navar_sidebar_current_language() {
     $post_id = absint(get_queried_object_id());
     if ($post_id) {
         $stored = (string) get_post_meta($post_id, '_navar_translation_language', true);
-        if (in_array($stored, array('ar-IQ', 'tg-TJ', 'en-US'), true)) return $stored;
+        if (in_array($stored, array('ar-IQ', 'tg-TJ', 'en-US', 'ru-RU'), true)) return $stored;
         /* Deterministic fallback for the generated translation ID range. */
         if ($post_id >= 502015 && $post_id <= 502320) {
             return (($post_id - 502015) % 2 === 0) ? 'ar-IQ' : 'tg-TJ';
@@ -39,12 +40,13 @@ function navar_sidebar_current_language() {
         if (preg_match('#^/(?:iraq|iq)(?:/|$)#i', $path)) return 'ar-IQ';
         if (preg_match('#^/tj(?:/|$)#i', $path)) return 'tg-TJ';
         if (preg_match('#^/en(?:/|$)#i', $path)) return 'en-US';
+        if (preg_match('#^/ru(?:/|$)#i', $path)) return 'ru-RU';
     }
     return 'fa-IR';
 }
 
 function navar_sidebar_language_clause($language) {
-    if (in_array($language, array('ar-IQ', 'tg-TJ', 'en-US'), true)) {
+    if (in_array($language, array('ar-IQ', 'tg-TJ', 'en-US', 'ru-RU'), true)) {
         return array(
             'key' => '_navar_translation_language',
             'value' => $language,

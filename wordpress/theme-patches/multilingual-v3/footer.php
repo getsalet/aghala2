@@ -42,7 +42,7 @@ wp_footer();
 
 <?php
 $navar_language_key = function_exists( 'navar_current_language' ) ? navar_current_language() : 'fa';
-$navar_language_map = array( 'fa' => 'fa-IR', 'iraq' => 'ar-IQ', 'tj' => 'tg-TJ', 'en' => 'en-US' );
+$navar_language_map = array( 'fa' => 'fa-IR', 'iraq' => 'ar-IQ', 'tj' => 'tg-TJ', 'en' => 'en-US', 'ru' => 'ru-RU' );
 $navar_page_language = isset( $navar_language_map[ $navar_language_key ] ) ? $navar_language_map[ $navar_language_key ] : 'fa-IR';
 ?>
 <script>

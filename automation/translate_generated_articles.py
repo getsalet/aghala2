@@ -26,6 +26,8 @@ LANGUAGE_CATEGORY_SLUG = {
     "ar-IQ": "maqalat-al-ray",
     "tg-TJ": "maqolahoi-obyor",
     "en-US": "en",
+    # Russian is produced by the separate queue in translate_russian_articles.py.
+    "ru-RU": "ru",
 }
 BATCH = max(1, int(os.getenv("GENERATED_TRANSLATION_BATCH_SIZE", "4")))
 MAX_BACKLOG_SOURCES = max(1, int(os.getenv("MAX_TRANSLATION_BACKLOG_SOURCES", "4")))
@@ -34,7 +36,8 @@ HEX_TEXT = re.compile(r"\b(?:[0-9A-Fa-f]{2}){6,}\b")
 RELATED_LABEL = re.compile(
     r"مطالب مرتبط|موضوعات مرتبط|مواضيع ذات صلة|مواد ذات صلة|"
     r"Мавзӯъҳои алоқаманд|Маводи робита|маҳсулҳои муталлиқ|"
-    r"Related (?:topics|posts|articles)",
+    r"Related (?:topics|posts|articles)|"
+    r"Связанные (?:статьи|темы|материалы)|Похожие статьи|Статьи по теме",
     re.IGNORECASE,
 )
 PARAGRAPH = re.compile(r"<p\b[^>]*>.*?</p>", re.IGNORECASE | re.DOTALL)
@@ -43,6 +46,7 @@ GENERIC_RELATED_LABEL = {
     "ar-IQ": "مقالة ذات صلة",
     "tg-TJ": "Мақолаи марбут",
     "en-US": "Related article",
+    "ru-RU": "Статья по теме",
 }
 
 

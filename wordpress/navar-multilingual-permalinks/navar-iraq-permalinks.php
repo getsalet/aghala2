@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Navar Multilingual Permalinks
  * Plugin URI:  https://navar-abyari.ir/
- * Description: Four-language routing: Persian at root, Arabic under /iraq/, Tajik under /tj/, and English under /en/.
- * Version:     3.0.0
+ * Description: Five-language routing: Persian at root, Arabic under /iraq/, Tajik under /tj/, English under /en/, and Russian under /ru/.
+ * Version:     3.1.0
  * Author:      Navar Abyari
  * License:     GPL-2.0-or-later
  * Text Domain: navar-multilingual-permalinks
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 final class Navar_Multilingual_Permalinks {
-    const VERSION = '3.0.0';
+    const VERSION = '3.1.0';
 
     public static function routes() {
         $routes = array(
@@ -38,6 +38,13 @@ final class Navar_Multilingual_Permalinks {
                 'category_slugs' => array( 'en', 'english' ),
                 'html_lang'      => 'en-US',
                 'locale'         => 'en_US',
+                'dir'            => 'ltr',
+            ),
+            'ru' => array(
+                'base'           => 'ru',
+                'category_slugs' => array( 'ru', 'russian' ),
+                'html_lang'      => 'ru-RU',
+                'locale'         => 'ru_RU',
                 'dir'            => 'ltr',
             ),
         );
@@ -254,7 +261,7 @@ final class Navar_Multilingual_Permalinks {
         ) );
         foreach ( $translated as $translated_id ) {
             $language = (string) get_post_meta( $translated_id, '_navar_translation_language', true );
-            if ( in_array( $language, array( 'ar-IQ', 'tg-TJ', 'en-US' ), true ) ) {
+            if ( in_array( $language, array( 'ar-IQ', 'tg-TJ', 'en-US', 'ru-RU' ), true ) ) {
                 $links[ $language ] = get_permalink( $translated_id );
             }
         }
