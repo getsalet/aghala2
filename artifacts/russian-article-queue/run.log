@@ -1,15 +1,15 @@
-russian_repaired_artifacts=175
-russian_batch=8 workers=4 pending=841
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 393 (char 392)
-russian_translation source=crop-224 language=ru-RU
-russian_translation source=crop-229 language=ru-RU
-russian_translation source=crop-226 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 759 (char 758)
-Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
-russian_translation source=crop-231 language=ru-RU
-Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
-russian_translation source=crop-228 language=ru-RU
-russian_translation source=crop-219 language=ru-RU
-russian_translation source=crop-232 language=ru-RU
-russian_translation source=crop-220 language=ru-RU
-{"completed": 183, "pending": 833, "progress_percent": 18.01}
+russian_repaired_artifacts=183
+russian_batch=8 workers=4 pending=833
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 335 (char 334)
+russian_translation source=crop-235 language=ru-RU
+russian_translation source=crop-225 language=ru-RU
+Segment attempt 1 failed for ru-RU: KeyError: 'translations'
+russian_translation source=crop-239 language=ru-RU
+russian_translation source=crop-218 language=ru-RU
+russian_translation source=crop-234 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1181 (char 1180)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 392 (char 391); Expecting ',' delimiter: line 1 column 391 (char 390)
+russian_translation source=crop-242 language=ru-RU
+russian_translation source=crop-236 language=ru-RU
+russian_translation source=crop-247 language=ru-RU
+{"completed": 191, "pending": 825, "progress_percent": 18.8}
