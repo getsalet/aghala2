@@ -32,17 +32,28 @@ env:
   AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
   AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
   AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
+  AGNES_API_KEY14: ${{ secrets.AGNES_API_KEY14 }}
+  AGNES_API_KEY15: ${{ secrets.AGNES_API_KEY15 }}
+  AGNES_API_KEY16: ${{ secrets.AGNES_API_KEY16 }}
+  AGNES_API_KEY17: ${{ secrets.AGNES_API_KEY17 }}
+  AGNES_API_KEY18: ${{ secrets.AGNES_API_KEY18 }}
+  AGNES_API_KEY19: ${{ secrets.AGNES_API_KEY19 }}
+  AGNES_API_KEY20: ${{ secrets.AGNES_API_KEY20 }}
+  AGNES_API_KEY21: ${{ secrets.AGNES_API_KEY21 }}
+  AGNES_API_KEY22: ${{ secrets.AGNES_API_KEY22 }}
+  AGNES_API_KEY23: ${{ secrets.AGNES_API_KEY23 }}
+  AGNES_API_KEY24: ${{ secrets.AGNES_API_KEY24 }}
+  AGNES_API_KEY25: ${{ secrets.AGNES_API_KEY25 }}
   AGNES_API_BASE: ${{ vars.AGNES_API_BASE || 'https://apihub.agnes-ai.com/v1' }}
   AGNES_MODEL: ${{ vars.AGNES_MODEL || 'agnes-3.0-flash' }}
   IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY || secrets.AGNES_API_KEY }}
   IMAGE_ENDPOINT: ${{ vars.IMAGE_ENDPOINT || 'https://apihub.agnes-ai.com/v1/images/generations' }}
   IMAGE_MODEL: ${{ vars.IMAGE_MODEL || 'agnes-image-2.5-flash' }}
-  # Operational setting for the shared fourteen-key pool: sixteen articles share thirty-two image workers
-  # to increase throughput without a nine-request image API burst.
-  # Controlled ramp: both repositories share the fourteen-key pool with reserved rebuild headroom.
-  BATCH_SIZE: '20'
-  ARTICLE_WORKERS: '20'
-  IMAGE_WORKERS: '40'
+  # Scaled for the 25-key Agnes pool (was 20/20/40 on 13 keys): same per-key load,
+  # about 1.9x the concurrent article and image throughput.
+  BATCH_SIZE: '38'
+  ARTICLE_WORKERS: '38'
+  IMAGE_WORKERS: '76'
   IMAGE_QA_ATTEMPTS: '6'
   IMAGE_SET_QA_ATTEMPTS: '4'
   IMAGE_QA_FAST_MODE: '0'

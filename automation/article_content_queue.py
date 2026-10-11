@@ -37,7 +37,8 @@ TABLE = "ha_posts"; META = "ha_postmeta"
 # Agnes config (same as city queue)
 AGNES_BASE = (os.getenv("AGNES_API_BASE") or "https://apihub.agnes-ai.com/v1").rstrip("/")
 AGNES_KEYS = []
-for _name in ["AGNES_API_KEY", *[f"AGNES_API_KEY{i}" for i in range(2, 15)]]:
+# Supports AGNES_API_KEY plus AGNES_API_KEY2..AGNES_API_KEY50 (25 configured).
+for _name in ["AGNES_API_KEY", *[f"AGNES_API_KEY{i}" for i in range(2, 51)]]:
     _value = os.getenv(_name, "").strip()
     if _value and _value not in AGNES_KEYS:
         AGNES_KEYS.append(_value)

@@ -35,14 +35,28 @@ jobs:
       AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
       AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
       AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
+      AGNES_API_KEY14: ${{ secrets.AGNES_API_KEY14 }}
+      AGNES_API_KEY15: ${{ secrets.AGNES_API_KEY15 }}
+      AGNES_API_KEY16: ${{ secrets.AGNES_API_KEY16 }}
+      AGNES_API_KEY17: ${{ secrets.AGNES_API_KEY17 }}
+      AGNES_API_KEY18: ${{ secrets.AGNES_API_KEY18 }}
+      AGNES_API_KEY19: ${{ secrets.AGNES_API_KEY19 }}
+      AGNES_API_KEY20: ${{ secrets.AGNES_API_KEY20 }}
+      AGNES_API_KEY21: ${{ secrets.AGNES_API_KEY21 }}
+      AGNES_API_KEY22: ${{ secrets.AGNES_API_KEY22 }}
+      AGNES_API_KEY23: ${{ secrets.AGNES_API_KEY23 }}
+      AGNES_API_KEY24: ${{ secrets.AGNES_API_KEY24 }}
+      AGNES_API_KEY25: ${{ secrets.AGNES_API_KEY25 }}
       AGNES_API_BASE: ${{ vars.AGNES_API_BASE || 'https://apihub.agnes-ai.com/v1' }}
       AGNES_MODEL: ${{ vars.AGNES_MODEL || 'agnes-3.0-flash' }}
       # Clear one sixteen-article Persian batch per slice with four source-level workers.
       # This uses only a controlled share of the fourteen-key pool and preserves city headroom.
-      MAX_ARTICLES: '24'
-      GENERATED_TRANSLATION_BATCH_SIZE: '24'
-      MAX_TRANSLATION_BACKLOG_SOURCES: '25'
-      TRANSLATION_WORKERS: '8'
+      # Scaled for the 25-key pool (was 24/24/25/8 on 13 keys). The backlog
+      # threshold stays above one Persian batch (38) so generation is not paused early.
+      MAX_ARTICLES: '46'
+      GENERATED_TRANSLATION_BATCH_SIZE: '46'
+      MAX_TRANSLATION_BACKLOG_SOURCES: '48'
+      TRANSLATION_WORKERS: '15'
       # Keep handoff eligibility aligned with the user-approved second
       # bounded retry cycle in the Persian queue.
       FAILED_RETRY_CYCLES: '2'
