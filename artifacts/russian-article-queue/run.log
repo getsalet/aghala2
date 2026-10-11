@@ -1,57 +1,53 @@
 agnes_keys_loaded=25
-russian_repaired_artifacts=731
-russian_batch=16 workers=8 pending=285
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191051939074119ppXnAghf)","type":"AgnesAI_error"}}
+russian_repaired_artifacts=747
+russian_batch=16 workers=8 pending=269
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101119150827310265574MuO7Jp)","type":"AgnesAI_error"}}
 agnes_key_disabled secret=AGNES_API_KEY14 http=401 active=24/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191052181877171bKMWHyDk)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191508575803517HZ6hXPeF)","type":"AgnesAI_error"}}
 agnes_key_disabled secret=AGNES_API_KEY16 http=401 active=23/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191052424501725TYzcVhJ8)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191508858344409ZkmohAv2)","type":"AgnesAI_error"}}
 agnes_key_disabled secret=AGNES_API_KEY18 http=401 active=22/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191052671944921Z5SdIVBE)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191509126625373ylZQkZ8A)","type":"AgnesAI_error"}}
 agnes_key_disabled secret=AGNES_API_KEY20 http=401 active=21/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191052912276928AtXW6QWp)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY22 http=401 active=20/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191053150921987kJCI2vJA)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY24 http=401 active=19/25
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 305 (char 304)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101119110629029804LxXK8wCs)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY17 http=401 active=18/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101119110640350834L47or5Jw)","type":"AgnesAI_error"}}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191509145524456extyVmIX)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY21 http=401 active=20/25
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191509409423715wJSk7e5I)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY23 http=401 active=19/25
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101119151015440521908jolJ3N)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY25 http=401 active=18/25
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 454 (char 453)
+Metadata attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Invalid control character at: line 2 column 2 (char 3)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191520371800880FaLGa2Am)","type":"AgnesAI_error"}}
 agnes_key_disabled secret=AGNES_API_KEY15 http=401 active=17/25
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111911062655956476ggOLkTD)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY23 http=401 active=16/25
-Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1269 (char 1268)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 4 column 4 (char 582)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 2026101119111715467338fdPaQYFY)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY19 http=401 active=15/25
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1002 (char 1001); Expecting ',' delimiter: line 1 column 1002 (char 1001)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191129650995990rF0RwkYs)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY21 http=401 active=14/25
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1476 (char 1475)
-HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191137154998820g5WJ4XQy)","type":"AgnesAI_error"}}
-agnes_key_disabled secret=AGNES_API_KEY25 http=401 active=13/25
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1207 (char 1206)
-russian_translation source=xref-619 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 29 (char 28)
-russian_translation source=xref-618 language=ru-RU
-russian_translation source=xref-624 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 7 column 13 (char 756)
-russian_translation source=xref-599 language=ru-RU
-russian_translation source=xref-611 language=ru-RU
-russian_translation source=xref-617 language=ru-RU
-russian_translation source=xref-616 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1078 (char 1077)
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 60 (char 59)
-russian_translation source=xref-614 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); Expecting value: line 1 column 19 (char 18)
-russian_translation source=xref-639 language=ru-RU
-russian_translation source=xref-626 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1346 (char 1345)
-russian_translation source=xref-627 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); JSON root must be an object; Extra data: line 4 column 4 (char 158)
-russian_translation source=xref-632 language=ru-RU
-russian_translation source=xref-622 language=ru-RU
-russian_translation source=xref-625 language=ru-RU
-russian_translation source=xref-641 language=ru-RU
-russian_translation source=xref-647 language=ru-RU
-{"completed": 747, "pending": 269, "progress_percent": 73.52}
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 202610111915207562467118c5s4gcV)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY22 http=401 active=16/25
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191520743852549mC8EwnZb)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY24 http=401 active=15/25
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191526959260714WqsY1AKB)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY17 http=401 active=14/25
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 271 (char 270)
+HTTP 401 on https://apihub.agnes-ai.com/v1/chat/completions: {"error":{"code":"","message":"This token status is unavailable (request id: 20261011191538636678912AgD3AaZM)","type":"AgnesAI_error"}}
+agnes_key_disabled secret=AGNES_API_KEY19 http=401 active=13/25
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 276 (char 275)
+russian_translation source=xref-645 language=ru-RU
+russian_translation source=xref-633 language=ru-RU
+russian_translation source=xref-643 language=ru-RU
+russian_translation source=xref-636 language=ru-RU
+russian_translation source=xref-634 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 586 (char 585)
+russian_translation source=xref-631 language=ru-RU
+Metadata attempt 1 failed for ru-RU: ValueError: Metadata keys missing
+russian_translation source=xref-648 language=ru-RU
+russian_translation source=crop-051 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1027 (char 1026)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 337 (char 336)
+russian_translation source=crop-079 language=ru-RU
+russian_translation source=crop-053 language=ru-RU
+russian_translation source=crop-098 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 4 column 4 (char 721)
+russian_translation source=crop-072 language=ru-RU
+russian_translation source=crop-055 language=ru-RU
+russian_translation source=xref-650 language=ru-RU
+russian_translation source=xref-630 language=ru-RU
+russian_translation source=crop-059 language=ru-RU
+{"completed": 763, "pending": 253, "progress_percent": 75.1}
