@@ -233,5 +233,10 @@
     "attempts": 1,
     "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
     "updated_at": "2026-10-11T20:01:32+00:00"
+  },
+  "xref-638": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T20:07:22+00:00"
   }
 }
