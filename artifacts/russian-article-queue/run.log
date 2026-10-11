@@ -1,13 +1,19 @@
-russian_repaired_artifacts=31
-russian_batch=8 workers=4 pending=985
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); Expecting ',' delimiter: line 1 column 680 (char 679)
-russian_translation source=crop-035 language=ru-RU
-russian_translation source=crop-032 language=ru-RU
-russian_translation source=crop-034 language=ru-RU
-Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 530 (char 529)
-russian_translation source=crop-039 language=ru-RU
-russian_translation source=crop-037 language=ru-RU
-russian_translation source=crop-036 language=ru-RU
-russian_translation source=crop-038 language=ru-RU
-russian_translation source=crop-040 language=ru-RU
-{"completed": 39, "pending": 977, "progress_percent": 3.84}
+russian_repaired_artifacts=39
+russian_batch=8 workers=4 pending=977
+Segment attempt 1 failed for ru-RU: ValueError: invalid literal for int() with base 10: ': 4'
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 438 (char 437)
+Segment attempt 2 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 380 (char 379)
+Segment attempt 3 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 439 (char 438)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 1507 (char 1506)
+russian_translation source=crop-041 language=ru-RU
+russian_translation source=crop-042 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 270 (char 269)
+russian_translation source=crop-043 language=ru-RU
+russian_translation source=crop-044 language=ru-RU
+russian_translation source=crop-046 language=ru-RU
+russian_translation source=crop-045 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting value: line 1 column 1 (char 0); JSON root must be an object; Extra data: line 1 column 29 (char 28)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 804 (char 803)
+russian_translation source=crop-047 language=ru-RU
+russian_translation source=crop-048 language=ru-RU
+{"completed": 47, "pending": 969, "progress_percent": 4.63}
