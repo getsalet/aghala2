@@ -1,0 +1,24 @@
+{
+  "files": {
+    "russian-batch-001-sources-0001-0050.zip": {
+      "sha256": "4e225194dd8a87dc90732341f1375c580663207821ab0ab5603d71de1e7ae904",
+      "size": 912812,
+      "uploaded_at": "2026-10-11T20:21:10+00:00"
+    },
+    "russian-batch-002-sources-0051-0100.zip": {
+      "sha256": "caa9a7030376832f1d08bb401408c881485c526d98d95c24b85ab9a52651c54b",
+      "size": 884728,
+      "uploaded_at": "2026-10-11T20:21:12+00:00"
+    },
+    "russian-batch-003-sources-0101-0150.zip": {
+      "sha256": "0734acfac92debb2efedc4a302bd7966468d56f093bb66f01748b49579d55d7c",
+      "size": 937222,
+      "uploaded_at": "2026-10-11T20:21:14+00:00"
+    },
+    "russian-batch-004-sources-0151-0200.zip": {
+      "sha256": "09699bc8bc1e2eb36561f4dc123a81a76645a8cb45b03de5a3613d99537d8f49",
+      "size": 893845,
+      "uploaded_at": "2026-10-11T20:21:17+00:00"
+    }
+  }
+}
