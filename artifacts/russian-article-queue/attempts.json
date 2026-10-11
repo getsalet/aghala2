@@ -223,5 +223,10 @@
     "attempts": 1,
     "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
     "updated_at": "2026-10-11T18:47:37+00:00"
+  },
+  "prod-090": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T19:34:31+00:00"
   }
 }
