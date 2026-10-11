@@ -213,5 +213,10 @@
     "attempts": 1,
     "last_error": "RuntimeError: Metadata translation failed for ru-RU: HTTP Error 401: Unauthorized",
     "updated_at": "2026-10-11T17:16:32+00:00"
+  },
+  "xref-437": {
+    "attempts": 1,
+    "last_error": "ValueError: Russian validation failed: untranslated Persian text remains",
+    "updated_at": "2026-10-11T18:32:09+00:00"
   }
 }
