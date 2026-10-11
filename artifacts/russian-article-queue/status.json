@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-10-11T11:14:00+00:00",
+  "language": "ru-RU",
+  "route": "/ru/",
+  "category_slug": "ru",
+  "source_articles_completed": 1016,
+  "completed": 8,
+  "pending": 1008,
+  "progress_percent": 0.79,
+  "articles_with_failed_attempts": 0,
+  "batch_size": 8,
+  "workers": 4,
+  "model": "agnes-3.0-flash",
+  "packages": {
+    "batch_size": 50,
+    "ready_batches": 0
+  },
+  "uploaded_packages": 0,
+  "last_run": {
+    "selected": 8,
+    "succeeded": 8,
+    "failed": 0,
+    "finished_at": "2026-10-11T11:14:00+00:00"
+  }
+}

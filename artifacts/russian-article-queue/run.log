@@ -1,0 +1,14 @@
+russian_batch=8 workers=4 pending=1016
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ':' delimiter: line 1 column 1365 (char 1364)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 673 (char 672)
+russian_translation source=crop-001 language=ru-RU
+russian_translation source=crop-002 language=ru-RU
+russian_translation source=crop-003 language=ru-RU
+russian_translation source=crop-004 language=ru-RU
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: JSON root must be an object; Extra data: line 1 column 33 (char 32)
+Segment attempt 1 failed for ru-RU: ValueError: no valid JSON object found: Expecting ',' delimiter: line 1 column 1518 (char 1517)
+russian_translation source=crop-007 language=ru-RU
+russian_translation source=crop-006 language=ru-RU
+russian_translation source=crop-005 language=ru-RU
+russian_translation source=crop-009 language=ru-RU
+{"completed": 8, "pending": 1008, "progress_percent": 0.79}
