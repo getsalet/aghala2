@@ -1,23 +1,3 @@
 agnes_keys_loaded=25
 russian_repaired_artifacts=1016
-russian_package_built=russian-batch-001-sources-0001-0050.zip
-russian_package_built=russian-batch-002-sources-0051-0100.zip
-russian_package_built=russian-batch-003-sources-0101-0150.zip
-russian_package_built=russian-batch-004-sources-0151-0200.zip
-russian_package_built=russian-batch-005-sources-0201-0250.zip
-russian_package_built=russian-batch-006-sources-0251-0300.zip
-russian_package_built=russian-batch-007-sources-0301-0350.zip
-russian_package_built=russian-batch-008-sources-0351-0400.zip
-russian_package_built=russian-batch-009-sources-0401-0450.zip
-russian_package_built=russian-batch-010-sources-0451-0500.zip
-russian_package_built=russian-batch-011-sources-0501-0550.zip
-russian_package_built=russian-batch-012-sources-0551-0600.zip
-russian_package_built=russian-batch-013-sources-0601-0650.zip
-russian_package_built=russian-batch-014-sources-0651-0700.zip
-russian_package_built=russian-batch-015-sources-0701-0750.zip
-russian_package_built=russian-batch-016-sources-0751-0800.zip
-russian_package_built=russian-batch-017-sources-0801-0850.zip
-russian_package_built=russian-batch-018-sources-0851-0900.zip
-russian_package_built=russian-batch-019-sources-0901-0950.zip
-russian_package_built=russian-batch-020-sources-0951-1000.zip
 {"completed": 1016, "pending": 0, "progress_percent": 100.0}
