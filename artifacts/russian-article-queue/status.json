@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T11:57:34+00:00",
+  "updated_at": "2026-10-12T13:16:03+00:00",
   "language": "ru-RU",
   "route": "/ru/",
   "category_slug": "ru",
@@ -20,6 +20,6 @@
     "selected": 0,
     "succeeded": 0,
     "failed": 0,
-    "finished_at": "2026-10-12T11:57:34+00:00"
+    "finished_at": "2026-10-12T13:16:02+00:00"
   }
 }
