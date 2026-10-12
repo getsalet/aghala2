@@ -1071,6 +1071,34 @@ def _php_attachment_metadata(image):
     )
 
 
+def wp_post_name(value: str) -> str:
+    """WordPress sanitize_title(): percent-encoded lowercase UTF-8, max 200 chars.
+
+    WordPress looks posts up by the encoded form, so a raw UTF-8 post_name
+    written by direct SQL makes the published post return 404.
+    """
+    text = str(value or "").lower()
+    out, size, octets, need = [], 0, [], 1
+    for byte in text.encode("utf-8"):
+        if byte < 128:
+            if size + 1 > 200:
+                break
+            out.append(chr(byte)); size += 1
+            continue
+        if not octets:
+            need = 2 if byte < 224 else 3 if byte < 240 else 4
+        octets.append(byte)
+        if size + need * 3 > 200:
+            break
+        if len(octets) == need:
+            out.append("".join("%" + format(b, "x") for b in octets)); size += need * 3; octets = []
+    slug = "".join(out).lower()
+    slug = re.sub(r"&.+?;", "", slug).replace(".", "-")
+    slug = re.sub(r"[^%a-z0-9 _-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
+    return re.sub(r"-+", "-", slug).strip("-")
+
+
 def sql_for(item, obj, images):
     title = obj["title"]; body = obj["html"]; urls = []
     for i, image in enumerate(images, 1):
@@ -1081,7 +1109,7 @@ def sql_for(item, obj, images):
             f"[[[IMAGE_{i}]]]",
             image_caption_policy.figure_html(url, item["title"], image_caption_policy.role_index(url, i), "fa-IR")
         )
-    pt = item["post_type"]; slug = item["slug"]
+    pt = item["post_type"]; slug = wp_post_name(item["slug"])
     queue_key = f"article-content-queue:{item['id']}"
     excerpt = obj.get("excerpt","")
     q = [
@@ -1119,7 +1147,7 @@ def sql_for(item, obj, images):
         q.append(
             f"SET @media_{idx}=(SELECT post_id FROM `{META}` WHERE meta_key='_navar_queue_image_id' AND meta_value='{esc(image_key)}' LIMIT 1); "
             f"INSERT INTO `{TABLE}` (`post_author`,`post_date`,`post_date_gmt`,`post_content`,`post_title`,`post_excerpt`,`post_status`,`comment_status`,`ping_status`,`post_name`,`post_modified`,`post_modified_gmt`,`post_parent`,`guid`,`menu_order`,`post_type`,`post_mime_type`,`comment_count`) "
-            f"SELECT 1,NOW(),UTC_TIMESTAMP(),'','{esc(item['title'])} - تصویر {idx}','','inherit','open','closed','{esc(name.rsplit('.',1)[0])}',NOW(),UTC_TIMESTAMP(),@post_id,'{esc(url)}',0,'attachment','{esc(image['mime'])}',0 WHERE @media_{idx} IS NULL AND @post_id IS NOT NULL; "
+            f"SELECT 1,NOW(),UTC_TIMESTAMP(),'','{esc(item['title'])} - تصویر {idx}','','inherit','open','closed','{esc(wp_post_name(name.rsplit('.',1)[0]))}',NOW(),UTC_TIMESTAMP(),@post_id,'{esc(url)}',0,'attachment','{esc(image['mime'])}',0 WHERE @media_{idx} IS NULL AND @post_id IS NOT NULL; "
             f"SET @media_{idx}=IF(@post_id IS NULL,NULL,COALESCE(@media_{idx},LAST_INSERT_ID())); "
             f"INSERT INTO `{META}` (`post_id`,`meta_key`,`meta_value`) SELECT @media_{idx},'_navar_queue_image_id','{esc(image_key)}' WHERE @media_{idx} IS NOT NULL AND NOT EXISTS (SELECT 1 FROM `{META}` WHERE post_id=@media_{idx} AND meta_key='_navar_queue_image_id'); "
             f"INSERT INTO `{META}` (`post_id`,`meta_key`,`meta_value`) SELECT @media_{idx},'_wp_attached_file','{esc(attached_file)}' WHERE @media_{idx} IS NOT NULL AND NOT EXISTS (SELECT 1 FROM `{META}` WHERE post_id=@media_{idx} AND meta_key='_wp_attached_file'); "
