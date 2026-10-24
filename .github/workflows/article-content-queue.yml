@@ -1,305 +1,126 @@
-# Controlled parallel mode: three articles with a shared five-image worker pool.
-name: article-content-queue
-
+name: AFP agri v2 - isolated draft generator
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
+    branches: [feat/agri-generator-v2-2905-merge593]
     paths:
-      - 'automation/article-failed-retry-trigger.txt'
-
+      - automation/agri_v2/**
+      - tests/agri_v2/**
+      - data/agri-v2/**
+      - .github/workflows/article-content-queue.yml
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Validate offline or explicitly create ONE local draft artifact
+        type: choice
+        options: [validate, draft]
+        default: validate
+      topic_id:
+        description: Stable topic ID from new queue
+        type: string
+      brief_path:
+        description: Repository-relative approved research brief, no secrets
+        type: string
+      inventory_path:
+        description: Fresh complete title/URL inventory, under 24 hours old
+        type: string
+        default: data/agri-v2/existing-title-index.json
+      confirm_model_calls:
+        description: Authorize bounded text and three image API calls for this one draft
+        type: boolean
+        default: false
 permissions:
   contents: write
-  actions: write
-
 concurrency:
-  # Same-workflow deduplication only. The wait step below serializes this writer
-  # behind rebuilds and translations without relying on GitHub pending-run eviction.
-  group: article-content-queue-${{ github.ref }}
+  group: afp-agri-v2-generator-${{ github.ref }}
   cancel-in-progress: false
-
-env:
-  AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
-  AGNES_API_KEY2: ${{ secrets.AGNES_API_KEY2 }}
-  AGNES_API_KEY3: ${{ secrets.AGNES_API_KEY3 }}
-  AGNES_API_KEY4: ${{ secrets.AGNES_API_KEY4 }}
-  AGNES_API_KEY5: ${{ secrets.AGNES_API_KEY5 }}
-  AGNES_API_KEY6: ${{ secrets.AGNES_API_KEY6 }}
-  AGNES_API_KEY7: ${{ secrets.AGNES_API_KEY7 }}
-  AGNES_API_KEY8: ${{ secrets.AGNES_API_KEY8 }}
-  AGNES_API_KEY9: ${{ secrets.AGNES_API_KEY9 }}
-  AGNES_API_KEY10: ${{ secrets.AGNES_API_KEY10 }}
-  AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
-  AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
-  AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
-  AGNES_API_KEY14: ${{ secrets.AGNES_API_KEY14 }}
-  AGNES_API_KEY15: ${{ secrets.AGNES_API_KEY15 }}
-  AGNES_API_KEY16: ${{ secrets.AGNES_API_KEY16 }}
-  AGNES_API_KEY17: ${{ secrets.AGNES_API_KEY17 }}
-  AGNES_API_KEY18: ${{ secrets.AGNES_API_KEY18 }}
-  AGNES_API_KEY19: ${{ secrets.AGNES_API_KEY19 }}
-  AGNES_API_KEY20: ${{ secrets.AGNES_API_KEY20 }}
-  AGNES_API_KEY21: ${{ secrets.AGNES_API_KEY21 }}
-  AGNES_API_KEY22: ${{ secrets.AGNES_API_KEY22 }}
-  AGNES_API_KEY23: ${{ secrets.AGNES_API_KEY23 }}
-  AGNES_API_KEY24: ${{ secrets.AGNES_API_KEY24 }}
-  AGNES_API_KEY25: ${{ secrets.AGNES_API_KEY25 }}
-  AGNES_API_BASE: ${{ vars.AGNES_API_BASE || 'https://apihub.agnes-ai.com/v1' }}
-  AGNES_MODEL: ${{ vars.AGNES_MODEL || 'agnes-3.0-flash' }}
-  IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY || secrets.AGNES_API_KEY }}
-  IMAGE_ENDPOINT: ${{ vars.IMAGE_ENDPOINT || 'https://apihub.agnes-ai.com/v1/images/generations' }}
-  IMAGE_MODEL: ${{ vars.IMAGE_MODEL || 'agnes-image-2.5-flash' }}
-  # Scaled for the 25-key Agnes pool (was 20/20/40 on 13 keys): same per-key load,
-  # about 1.9x the concurrent article and image throughput.
-  BATCH_SIZE: '38'
-  ARTICLE_WORKERS: '38'
-  IMAGE_WORKERS: '76'
-  IMAGE_QA_ATTEMPTS: '6'
-  IMAGE_SET_QA_ATTEMPTS: '4'
-  IMAGE_QA_FAST_MODE: '0'
-  # Give every exhausted failed article one bounded retry cycle. Completed
-  # articles are never selected or regenerated.
-  # User-approved second bounded retry wave for every terminal failure.
-  # Completed articles are still never selected or regenerated.
-  FAILED_RETRY_CYCLES: '2'
-
 jobs:
-  process-next-article:
+  isolated:
+    if: github.repository == 'getsalet/aghala2' && github.ref == 'refs/heads/feat/agri-generator-v2-2905-merge593'
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 25
+    env:
+      AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
+      AGNES_API_KEY2: ${{ secrets.AGNES_API_KEY2 }}
+      AGNES_API_KEY3: ${{ secrets.AGNES_API_KEY3 }}
+      AGNES_API_KEY4: ${{ secrets.AGNES_API_KEY4 }}
+      AGNES_API_KEY5: ${{ secrets.AGNES_API_KEY5 }}
+      AGNES_API_KEY6: ${{ secrets.AGNES_API_KEY6 }}
+      AGNES_API_KEY7: ${{ secrets.AGNES_API_KEY7 }}
+      AGNES_API_KEY8: ${{ secrets.AGNES_API_KEY8 }}
+      AGNES_API_KEY9: ${{ secrets.AGNES_API_KEY9 }}
+      AGNES_API_KEY10: ${{ secrets.AGNES_API_KEY10 }}
+      AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
+      AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
+      AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
+      AGNES_API_KEY14: ${{ secrets.AGNES_API_KEY14 }}
+      AGNES_API_KEY15: ${{ secrets.AGNES_API_KEY15 }}
+      REQUEST_MODE: ${{ inputs.mode }}
+      TOPIC_ID: ${{ inputs.topic_id }}
+      BRIEF_PATH: ${{ inputs.brief_path }}
+      INVENTORY_PATH: ${{ inputs.inventory_path }}
+      CONFIRM_CALLS: ${{ inputs.confirm_model_calls }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Sync latest main state
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
+          ref: ${{ github.ref }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Wait for rebuild and translation writers
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pillow
+      - name: Offline tests and queue integrity, zero model calls
+        run: |
+          python -m unittest discover -s tests/agri_v2 -v
+          python -m automation.agri_v2 validate
+      - name: One draft, only with explicit operator confirmation
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'draft'
         run: |
           set -euo pipefail
-          for attempt in $(seq 1 660); do
-            active=0
-            for workflow in rebuild-all-article-images.yml article-translations.yml; do
-              count="$(gh run list --workflow "$workflow" --limit 30 --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending" or .status == "requested")] | length')"
-              active=$((active + count))
-            done
-            if [ "$active" -eq 0 ]; then
-              echo "No higher-priority writer is active; Persian generation may start."
-              exit 0
-            fi
-            if [ "$attempt" -eq 1 ]; then echo "Waiting for $active rebuild/translation run(s); this run stays active instead of being cancelled."; fi
-            sleep 30
-          done
-          echo "::error::Higher-priority writer did not finish within the bounded wait."
-          exit 1
-
-      - name: Install image tooling
-        run: python -m pip install --disable-pip-version-check pillow
-
-      - name: Validate required secrets
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -n "$AGNES_API_KEY" || { echo '::error::AGNES_API_KEY is missing'; exit 1; }
-
-      - name: Validate Python and run tests
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m py_compile automation/article_content_queue.py automation/image_prompt_policy.py automation/image_quality_gate.py automation/rebuild_article_images_exact_product.py automation/translate_generated_articles.py automation/render_article_queue_status.py automation/compress_article_images.py automation/package_article_content_batches.py automation/write_new_article_batch_signal.py automation/upload_new_article_batches_ftps.py
-          python -m unittest discover -s tests -p 'test_*.py'
-
-      - name: Prioritize translation backlog
-        id: translation_backlog
-        shell: bash
-        run: |
-          set +e
-          python automation/translate_generated_articles.py --check-backlog
-          rc=$?
-          if [ "$rc" -eq 2 ]; then
-            echo "pending=1" >> "$GITHUB_OUTPUT"
-            echo "Persian generation paused until all completed articles have Arabic, Tajik, and English versions."
-          elif [ "$rc" -eq 0 ]; then
-            echo "pending=0" >> "$GITHUB_OUTPUT"
-          else
-            exit "$rc"
-          fi
-          python automation/render_article_queue_status.py
-
-      - name: Regenerate deterministic topics
-        if: steps.translation_backlog.outputs.pending == '0'
-        run: python automation/topic_matrix.py
-
-      - name: Generate next article, images, and reversible SQL
-        if: steps.translation_backlog.outputs.pending == '0'
-        id: queue
-        shell: bash
-        run: |
-          set +e
-          mkdir -p artifacts/article-content-queue
-          python automation/article_content_queue.py \
-            2>&1 | tee artifacts/article-content-queue/run.log
-          rc=${PIPESTATUS[0]}
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit 0
-
-      - name: Optimize article images as WebP
-        if: always()
-        run: python automation/compress_article_images.py
-
-      - name: Refresh dashboard
-        if: always()
-        run: python automation/render_article_queue_status.py
-
-      - name: Detect a newly completed 50-article package
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          python automation/write_new_article_batch_signal.py
-          ready="$(python - <<'PY'
-          import hashlib,json
+          test "$CONFIRM_CALLS" = "true"
+          python - <<'PY'
+          import os,re
           from pathlib import Path
-          root=Path('artifacts/article-content-queue');signal=root/'.new-batch-signal';packages=root/'packages';state=root/'ftps-upload-state.json'
-          try:tracked=json.loads(state.read_text(encoding='utf-8')).get('files',{})
-          except Exception:tracked={}
-          pending=0
-          if signal.exists():
-            for raw in signal.read_text(encoding='utf-8').splitlines():
-              name=Path(raw.strip()).name
-              if not name:continue
-              if not name.endswith('.zip'):name+='.zip'
-              path=packages/name
-              if not path.exists():continue
-              digest=hashlib.sha256(path.read_bytes()).hexdigest();previous=tracked.get(name,{})
-              if previous.get('sha256')!=digest or int(previous.get('size',-1))!=path.stat().st_size:pending+=1
-          print(1 if pending else 0)
+          if not re.fullmatch(r'agri-[a-f0-9]{12}',os.environ['TOPIC_ID']):
+              raise SystemExit('Invalid topic ID')
+          root=Path.cwd().resolve()
+          for key in ['BRIEF_PATH','INVENTORY_PATH']:
+              p=Path(os.environ[key]).resolve()
+              if root not in p.parents or not p.is_file():
+                  raise SystemExit('Input must be an existing repository-relative file')
           PY
-          )"
-          echo "NEW_ARTICLE_BATCH_READY=$ready" >> "$GITHUB_ENV"
-          echo "article_ftps_dispatch_ready=$ready"
-
-      - name: Persist queue state
-        if: always()
+          python -m automation.agri_v2 draft --topic-id "$TOPIC_ID" --brief "$BRIEF_PATH" --inventory "$INVENTORY_PATH" --allow-model-calls
+      - name: Upload staged artifacts even on partial failure
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.mode == 'draft'
+        uses: actions/upload-artifact@v4
+        with:
+          name: afp-agri-v2-draft-${{ github.run_id }}
+          path: artifacts/agri-v2/
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Preserve draft/progress on THIS feature branch only
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.mode == 'draft'
         shell: bash
         run: |
           set -euo pipefail
+          test "$GITHUB_REF_NAME" = "feat/agri-generator-v2-2905-merge593"
+          test -d artifacts/agri-v2 || exit 0
+          rm -f artifacts/agri-v2/.writer.lock
+          cp -a artifacts/agri-v2 /tmp/afp-v2-artifacts
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-          # Preserve generated state, update to the latest main, then restore
-          # generated files. This avoids add/add and rebase conflicts when
-          # STATUS.md or another tracked state file changes during a run.
-          state_dir="$(mktemp -d)"
-          cp -a artifacts/article-content-queue/. "$state_dir/"
-          git fetch origin main
-          git reset --hard origin/main
-          # Replace the tracked artifact tree rather than overlaying it so
-          # migrations can actually delete legacy JPG and non-SEO duplicates.
-          rm -rf artifacts/article-content-queue
-          mkdir -p artifacts/article-content-queue
-          cp -a "$state_dir/." artifacts/article-content-queue/
-          git add -f artifacts/article-content-queue/images/* 2>/dev/null || true
-          git add -f artifacts/article-content-queue/items/*.json 2>/dev/null || true
-          git add -f artifacts/article-content-queue/sql/*.sql 2>/dev/null || true
-          git add -f artifacts/article-content-queue/rollback/*.sql 2>/dev/null || true
-          git add -f artifacts/article-content-queue/packages/*.zip 2>/dev/null || true
-          git add -f artifacts/article-content-queue/run.log 2>/dev/null || true
-          git add -f artifacts/article-content-queue/.new-batch-signal 2>/dev/null || true
-          git add -A artifacts/article-content-queue
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update article queue state [skip ci]'
-            git push origin HEAD:main
-          fi
-
-      - name: Dispatch FTPS only while an unuploaded 50-article ZIP exists
-        if: always() && !cancelled() && env.NEW_ARTICLE_BATCH_READY == '1'
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run upload-article-batches-ftps.yml --ref main
-
-      - name: Upload run artifacts
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: article-content-queue-${{ github.run_id }}
-          path: |
-            artifacts/article-content-queue/
-            data/article-catalog.json
-          retention-days: 30
-
-      # A transient reviewer/API failure may leave valid completed articles and
-      # a preserved candidate. Keep advancing automatically after a cooldown;
-      # translation-only runs remain owned by the translation workflow.
-      - name: Continue article pipeline automatically
-        if: always() && !cancelled()
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          read -r pending eligible_remaining <<<"$(python - <<'PY'
-          import json
-          import sys
-          from pathlib import Path
-          sys.path.insert(0, 'automation')
-          import article_content_queue as queue
-          status_path = Path('artifacts/article-content-queue/status.json')
-          queue_path = Path('artifacts/article-content-queue/queue.json')
-          status = json.loads(status_path.read_text(encoding='utf-8')) if status_path.exists() else {}
-          state = json.loads(queue_path.read_text(encoding='utf-8')) if queue_path.exists() else {'items': []}
-          print(int(status.get('pending', 0)), sum(1 for item in state.get('items', []) if queue.is_retry_eligible(item)))
-          PY
-          )"
-          translation_remaining="$(python - <<'PY'
-          import json
-          from pathlib import Path
-          path=Path('artifacts/article-content-queue/translation-status.json')
-          data=json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
-          print(int(data.get('pending_translation_units',0)))
-          PY
-          )"
-          read -r rebuild_remaining rebuild_stalled <<<"$(python - <<'PY'
-          import json
-          from pathlib import Path
-          path=Path('artifacts/article-content-queue/image-rebuild-reference-rerender-3d-v12-family-aware-layflat-repair.json')
-          data=json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
-          print(int(data.get('remaining_candidates',0)), int(data.get('consecutive_no_progress_runs',0)))
-          PY
-          )"
-          rebuild_active="$(gh run list --workflow rebuild-all-article-images.yml --limit 20 --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending" or .status == "requested")] | length')"
-          if [ "$rebuild_active" -gt 0 ]; then
-            echo "An image-family rebuild is active or queued; leaving the pipeline handoff to it."
-          elif [ "${{ steps.translation_backlog.outputs.pending }}" = "1" ] || [ "$translation_remaining" -gt 0 ]; then
-            echo "Translation backlog has $translation_remaining units after this run; dispatching the translator before more Persian generation."
-            gh workflow run article-translations.yml --ref main
-          elif [ "$rebuild_remaining" -gt 0 ] && [ "$rebuild_stalled" -lt 3 ] && [ "${{ steps.queue.outcome }}" != "skipped" ]; then
-            echo "Fresh generation advanced; dispatching one bounded image-repair slice before the next content batch."
-            gh workflow run rebuild-all-article-images.yml --ref main
-          elif [ "$eligible_remaining" -gt 0 ] && [ "${{ steps.queue.outcome }}" != "skipped" ]; then
-            echo "Queue has $pending pending and $eligible_remaining total eligible articles including bounded failed retries; cooling down before the next batch."
-            sleep 60
-            gh workflow run article-content-queue.yml --ref main
-          else
-            echo "No generation handoff is required from this run."
-          fi
-
-      - name: Fail run when queue processing failed
-        if: steps.queue.outcome != 'skipped' && steps.queue.outputs.exit_code != '0'
-        run: exit 1
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            if ! git diff --quiet "$GITHUB_SHA" "origin/$GITHUB_REF_NAME" -- artifacts/agri-v2; then
+              echo 'Remote draft state changed; preserve upload artifact instead of overwriting.'
+              exit 1
+            fi
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            mkdir -p artifacts/agri-v2
+            cp -a /tmp/afp-v2-artifacts/. artifacts/agri-v2/
+            git add -f artifacts/agri-v2
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Preserve isolated v2 draft progress; no publication [skip ci]'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep 3
+          done
+          exit 1

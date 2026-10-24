@@ -1,0 +1,15 @@
+{
+  "topic_id": null,
+  "approved_for_draft": false,
+  "semantic_review_done": false,
+  "overlap_review_done": false,
+  "sources_verified": false,
+  "editor": null,
+  "agronomy_reviewer": null,
+  "reviewed_at": null,
+  "novelty_note": null,
+  "slug": null,
+  "outline": [],
+  "sources": [{"url": null,"locator": null,"excerpt": null}],
+  "approved_facts": [{"claim": null,"conditions": null,"source_url": null}]
+}
