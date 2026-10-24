@@ -1,0 +1,44 @@
+[
+  {
+    "id": "agri-68bb3f68138d",
+    "title": "میزان برداشت کدو حلوایی در هکتار؛ دامنه عملکرد و عوامل تغییر آن",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  },
+  {
+    "id": "agri-6a04e31069c0",
+    "title": "میزان برداشت ماشک در هکتار؛ دامنه عملکرد و عوامل تغییر آن",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  },
+  {
+    "id": "agri-e4ad7582f1cd",
+    "title": "تعداد نشای گوجه‌فرنگی در هکتار؛ محاسبه نیاز خزانه و تلفات انتقال",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  },
+  {
+    "id": "agri-d52cdebf818e",
+    "title": "میزان برداشت چغندر لبویی در هکتار؛ دامنه عملکرد و عوامل تغییر آن",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  },
+  {
+    "id": "agri-af1a4b491d83",
+    "title": "زمان مناسب برداشت لوبیا قرمز؛ نشانه‌های رسیدگی و معیار بازار",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  },
+  {
+    "id": "agri-3ab6116ba6cf",
+    "title": "میزان برداشت ذرت دانه‌ای در هکتار؛ دامنه عملکرد و عوامل تغییر آن",
+    "origin": "NEW",
+    "priority": "P1",
+    "status": "awaiting_research"
+  }
+]
