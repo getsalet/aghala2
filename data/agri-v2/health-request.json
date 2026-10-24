@@ -1,0 +1,9 @@
+{
+  "request": "initial-user-authorized-health-v1",
+  "slots": "1-15 only",
+  "text_model": "agnes-2.5-flash",
+  "image_model": "agnes-image-2.5-flash",
+  "max_requests_per_unique_credential": 2,
+  "article_generation": false,
+  "publication": false
+}

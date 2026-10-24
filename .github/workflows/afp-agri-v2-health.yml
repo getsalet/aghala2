@@ -1,0 +1,78 @@
+name: AFP agri v2 - bounded key health (slots 1-15)
+on:
+  push:
+    branches: [feat/agri-generator-v2-2905-merge593]
+    paths: [data/agri-v2/health-request.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: afp-agri-v2-health-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  health:
+    if: github.repository == 'getsalet/aghala2' && github.ref == 'refs/heads/feat/agri-generator-v2-2905-merge593'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
+      AGNES_API_KEY2: ${{ secrets.AGNES_API_KEY2 }}
+      AGNES_API_KEY3: ${{ secrets.AGNES_API_KEY3 }}
+      AGNES_API_KEY4: ${{ secrets.AGNES_API_KEY4 }}
+      AGNES_API_KEY5: ${{ secrets.AGNES_API_KEY5 }}
+      AGNES_API_KEY6: ${{ secrets.AGNES_API_KEY6 }}
+      AGNES_API_KEY7: ${{ secrets.AGNES_API_KEY7 }}
+      AGNES_API_KEY8: ${{ secrets.AGNES_API_KEY8 }}
+      AGNES_API_KEY9: ${{ secrets.AGNES_API_KEY9 }}
+      AGNES_API_KEY10: ${{ secrets.AGNES_API_KEY10 }}
+      AGNES_API_KEY11: ${{ secrets.AGNES_API_KEY11 }}
+      AGNES_API_KEY12: ${{ secrets.AGNES_API_KEY12 }}
+      AGNES_API_KEY13: ${{ secrets.AGNES_API_KEY13 }}
+      AGNES_API_KEY14: ${{ secrets.AGNES_API_KEY14 }}
+      AGNES_API_KEY15: ${{ secrets.AGNES_API_KEY15 }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pillow
+      - name: Test no-secret output and slot bound
+        run: python -m unittest discover -s tests/agri_v2 -p 'test_health.py' -v
+      - name: Probe capabilities, no articles or publishing
+        id: probe
+        continue-on-error: true
+        run: python -m automation.agri_v2.healthcheck
+      - name: Persist sanitized report to this feature branch only
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = "feat/agri-generator-v2-2905-merge593"
+          test -f data/agri-v2/health/latest.json
+          cp data/agri-v2/health/latest.json /tmp/afp-agri-health.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            mkdir -p data/agri-v2/health
+            cp /tmp/afp-agri-health.json data/agri-v2/health/latest.json
+            git add -f data/agri-v2/health/latest.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Record sanitized slots 1-15 text/image health [skip ci]'
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - name: Capability gate
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('data/agri-v2/health/latest.json'))
+          if not x['eligible_text_slots'] or not x['eligible_image_slots']:
+              raise SystemExit('No verified text/image pair available; generator remains blocked.')
+          PY
