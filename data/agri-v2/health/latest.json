@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "checked_at": "2026-10-24T07:55:55+00:00",
+  "text_model": "agnes-2.5-flash",
+  "image_model": "agnes-image-2.5-flash",
+  "api_base": "https://apihub.agnes-ai.com/v1",
+  "slot_limit": 15,
+  "configured_slots": 0,
+  "unique_credentials_tested": 0,
+  "slots": [
+    {
+      "slot": "AGNES_API_KEY",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY2",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY3",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY4",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY5",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY6",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY7",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY8",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY9",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY10",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY11",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY12",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY13",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY14",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    },
+    {
+      "slot": "AGNES_API_KEY15",
+      "configured": false,
+      "text": {
+        "state": "missing"
+      },
+      "image": {
+        "state": "missing"
+      }
+    }
+  ],
+  "eligible_text_slots": [],
+  "eligible_image_slots": [],
+  "no_article_generation": true,
+  "no_publication": true,
+  "run_id": "40076011158",
+  "source_commit": "b9e79132d6d120eca4b67b7e00c67f354ade22d3"
+}
