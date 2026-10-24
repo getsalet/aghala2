@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "text_model": "agnes-2.5-flash",
+  "image_model": "agnes-image-2.5-flash",
+  "api_base": "https://apihub.agnes-ai.com/v1",
+  "max_key_slot": 15,
+  "images_per_article": 3,
+  "automatic_generation": false,
+  "publication_enabled": false,
+  "wordpress_connection": "not_configured",
+  "hosting_connection": "not_configured",
+  "health_max_age_hours": 24,
+  "inventory_max_age_hours": 24,
+  "default_batch_size": 1,
+  "max_attempts_per_request": 2,
+  "article_word_range": [
+    550,
+    2500
+  ],
+  "legacy_generation_unchanged": true
+}

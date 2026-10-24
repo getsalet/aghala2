@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "counts": {
+    "new": 2905,
+    "merge": 593,
+    "hold": 370
+  },
+  "new_origins": {
+    "NEW": 948,
+    "REVIEW": 1957
+  },
+  "merge_origins": {
+    "EXISTING": 213,
+    "EXPAND": 375,
+    "QUEUED": 5
+  },
+  "files": [
+    {
+      "path": "data/agri-v2/new/part-001.jsonl",
+      "count": 100,
+      "sha256": "a4b354838f2b24c3b786000a411e1beab7e467dff29fab0dbcad5c9c96f1a517",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-002.jsonl",
+      "count": 100,
+      "sha256": "a52fb452eda037ff9e76f8d5b70a8900eb0e7da9a2da130cf554653ff9773bee",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-003.jsonl",
+      "count": 100,
+      "sha256": "5aa8ff452ebe43ea62b639c336fe612690368e9378f3b1c68e5c21dffe8abd2d",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-004.jsonl",
+      "count": 100,
+      "sha256": "416fcdac5d293c7e9610569e94df7d7fd49484be348f1eeaa2b7bdd9339a586c",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-005.jsonl",
+      "count": 100,
+      "sha256": "9e295437031ffb1e0eaa68cbb01b15a75d41017467ce4b7eed8e8d34f873c9d0",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-006.jsonl",
+      "count": 100,
+      "sha256": "686d73fbae80f778d5d16eba023090c9f014068d3c9eb4856d1b1ca554a95af9",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-007.jsonl",
+      "count": 100,
+      "sha256": "6a3bbd37c36a045c4556d6a361c221eeb02f0d33b238efbd12ed46383af79a08",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-008.jsonl",
+      "count": 100,
+      "sha256": "618c92674f1e5fabc520ed499660056be1ee1754206b7b8a8f04b21cb4263503",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-009.jsonl",
+      "count": 100,
+      "sha256": "96908f94e987df9aacd776efba50942f42a82cd999c0ed55f2e0310c65988894",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-010.jsonl",
+      "count": 100,
+      "sha256": "a2e178b0b8650343ffe5c1ba5934f98dd713f643c00d179a129080253da23df2",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-011.jsonl",
+      "count": 100,
+      "sha256": "e0a5cacba1793adda8190956544250de57e43368b32d8fc9dce0aff79a682588",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-012.jsonl",
+      "count": 100,
+      "sha256": "88d1ebc3ed63a1ce5372c2c473d9a185d433da1a6c9d8860a15db08419455cd5",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-013.jsonl",
+      "count": 100,
+      "sha256": "e17c6209e2a9ec04194bcb442519e9826b5242583a7606880d4af9de840d332c",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-014.jsonl",
+      "count": 100,
+      "sha256": "a28d12da48a4254e54e788fd9468cb1d46169221dc06d2aed843ef0948d5ecb6",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-015.jsonl",
+      "count": 100,
+      "sha256": "e7e6c7dc131f1e2853c486b0f1609b4bce505e9a672c1c71cabd66191cb237f1",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-016.jsonl",
+      "count": 100,
+      "sha256": "f29a5c54429d9d392f19316537480615f70bebfbe0d637617543d7be4360e123",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-017.jsonl",
+      "count": 100,
+      "sha256": "c4ebcef7bf91096c0597b8a817eebb4103a931d6b504581f49da4f654163a4c8",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-018.jsonl",
+      "count": 100,
+      "sha256": "f8b473ada8f45155defc33324630d2cf0c1296929e17c6c088ab920dcb906092",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-019.jsonl",
+      "count": 100,
+      "sha256": "734c01e3d65bfa392439d25bd5a4e122cea8be864fc3062a5a452c1c8f4018fe",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-020.jsonl",
+      "count": 100,
+      "sha256": "a2e6101f8a5acae441444f2452c8687b631e431b28c21d314962f0410d20b2c6",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-021.jsonl",
+      "count": 100,
+      "sha256": "db44effdfe15a03e7cfce793a452916e9150d9941bcb61c3e6affbe655ebf781",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-022.jsonl",
+      "count": 100,
+      "sha256": "b08aa99ef0a5e0e937e2e5bfc7f219b613b1796d4ac147aa95a3eebc59f921b9",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-023.jsonl",
+      "count": 100,
+      "sha256": "1f5d85492da1823a21214257c003b0891dd45ac04af6ca1daf87344b26922347",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-024.jsonl",
+      "count": 100,
+      "sha256": "e1e416356051b69084b804f9557470c18e93584fdedaff3bc0ba336c9dccce48",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-025.jsonl",
+      "count": 100,
+      "sha256": "e316aef71833acc0bc656765bed2744fd7b885bbcc3ba461ec0b05393a96fb4b",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-026.jsonl",
+      "count": 100,
+      "sha256": "86a526bff4299fdf68f0abe033341b49ffc5fa0c152f184bb9c26e07c7370718",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-027.jsonl",
+      "count": 100,
+      "sha256": "6ed30eaa3a4b47566bac0124de64403dbe267f6f8d3cbe7b787858e59197da3f",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-028.jsonl",
+      "count": 100,
+      "sha256": "166bd240aafbfc347d107be642a7aab774fcef97d429cb9dab1dcae7de3ca580",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-029.jsonl",
+      "count": 100,
+      "sha256": "7323cea709bcb1e391e75c6c43d095f2d8e61304b9fe17a65a1ed93ac7438108",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/new/part-030.jsonl",
+      "count": 5,
+      "sha256": "8932942d87a93f475a4bf4d875019d7e3be1a4103844dd4feb935377eb48a957",
+      "queue": "new"
+    },
+    {
+      "path": "data/agri-v2/merge/part-001.jsonl",
+      "count": 100,
+      "sha256": "3c1b4484e067a91ad28766ce96ab7d558fe282b4e3020367a283b9585c007add",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/merge/part-002.jsonl",
+      "count": 100,
+      "sha256": "97edbb43b77720c21e6438987758bf1976607f907769736cb990bf7dc26ff9d0",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/merge/part-003.jsonl",
+      "count": 100,
+      "sha256": "9401c45e15602953549e155d223ad1059c55031eed287a5a4445c9cc30819627",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/merge/part-004.jsonl",
+      "count": 100,
+      "sha256": "9645d95181b05ebf4fdd18165e470e30245a464676b9eeb95c60d59d108a0527",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/merge/part-005.jsonl",
+      "count": 100,
+      "sha256": "27fd5e78f83e788c3eae0715d7451ec68ad58a26cedbc37ba327048770a8714d",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/merge/part-006.jsonl",
+      "count": 93,
+      "sha256": "bb5005569c2ef4435c3b39805a6309a56de84c83d9d8487ebe50b4c42e5cfb4f",
+      "queue": "merge"
+    },
+    {
+      "path": "data/agri-v2/hold/part-001.jsonl",
+      "count": 100,
+      "sha256": "59bd6c2bc158319e20e2af6f203e26913439eb4d6218757f58f9c78b706c968f",
+      "queue": "hold"
+    },
+    {
+      "path": "data/agri-v2/hold/part-002.jsonl",
+      "count": 100,
+      "sha256": "1d655693d89ce0875760d8a412e87a7b9637c59c1c436f6c486e5894483d1aca",
+      "queue": "hold"
+    },
+    {
+      "path": "data/agri-v2/hold/part-003.jsonl",
+      "count": 100,
+      "sha256": "e425292a7e664c364f2a5ed1e3016d6d9fa193895f0e668e54be159de817b49e",
+      "queue": "hold"
+    },
+    {
+      "path": "data/agri-v2/hold/part-004.jsonl",
+      "count": 70,
+      "sha256": "822ce0b30e2d6d2654d55293663a13a7a840ddf45da0c06b2abc33be393ce556",
+      "queue": "hold"
+    }
+  ],
+  "legacy_queue_untouched": true,
+  "source_audit_scope": "2026-10-24 inventory + provided Search Console sample; no private GSC metrics included",
+  "owner_decisions": {
+    "NEW_and_REVIEW": "queue as new articles per current request; preserve overlap/research checks",
+    "EXISTING_EXPAND_QUEUED": "separate enrichment/merge queue; choose verified target before updates",
+    "DOMAIN_REVIEW": "deferred by owner"
+  }
+}
